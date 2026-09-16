@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) — isaacmath.kr 전용 GA4 속성. faithreason.kr 측정 ID를 재사용하지 말 것 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JS3GE709TF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JS3GE709TF');
+</script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2084707405154770"
+        crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isaac Math · 중2 2학기 강의노트</title>
+<meta name="description" content="중2 2학기 수학 강의노트 — 이등변삼각형과 삼각형의 외심·내심, 평행사변형과 여러 가지 사각형, 도형의 닮음과 평행선 사이의 선분의 길이의 비, 삼각형의 무게중심, 피타고라스 정리, 경우의 수와 확률. 개념 정리와 인터랙티브 퀴즈, 연습문제(기본·응용·심화)를 무료로 제공합니다.">
+<link rel="canonical" href="https://isaacmath.kr/isaacmath_2-2_pro/">
+<meta property="og:title" content="Isaac Math · 중2 2학기 강의노트">
+<meta property="og:description" content="중2 2학기 수학 강의노트 — 이등변삼각형과 삼각형의 외심·내심, 평행사변형과 여러 가지 사각형, 도형의 닮음과 평행선 사이의 선분의 길이의 비, 삼각형의 무게중심, 피타고라스 정리, 경우의 수와 확률. 개념 정리와 인터랙티브 퀴즈, 연습문제(기본·응용·심화)를 무료로 제공합니다.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://isaacmath.kr/isaacmath_2-2_pro/">
+<style>
+  :root{
+    --bg:#0b1220; --bg2:#0f1830; --card:rgba(30,41,66,0.55); --border:rgba(148,163,184,0.18);
+    --text:#e7ecf3; --muted:#9aa7bd; --green:#34d399; --green-d:#059669; --blue:#60a5fa; --gold:#fbbf24; --purple:#c4b5fd;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;
+    background:radial-gradient(1200px 600px at 80% -10%, rgba(52,211,153,0.12), transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, rgba(96,165,250,0.10), transparent 55%), var(--bg);
+    color:var(--text); line-height:1.7; min-height:100vh; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:880px;margin:0 auto;padding:56px 24px 90px;}
+  .cover{text-align:center;margin-bottom:36px;}
+  .pro-badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;color:#1a1205;
+    background:linear-gradient(135deg,#fde68a,var(--gold));padding:5px 12px;border-radius:6px;margin-bottom:16px;}
+  .cover h1{font-size:40px;font-weight:800;letter-spacing:-0.035em;line-height:1.15;}
+  .cover .accent{width:64px;height:3px;background:linear-gradient(90deg,var(--green),var(--gold));margin:18px auto;border-radius:3px;}
+  .cover .sub{color:var(--muted);font-size:15px;}
+  .overall{max-width:520px;margin:24px auto 0;background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:16px 20px;backdrop-filter:blur(10px);}
+  .overall .lbl{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:8px;}
+  .bar{height:8px;border-radius:6px;background:rgba(148,163,184,0.18);overflow:hidden;}
+  .bar > i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--green),var(--gold));border-radius:6px;transition:width .4s;}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px;}
+  .unit{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--border);
+    border-radius:16px;padding:22px 24px;backdrop-filter:blur(10px);transition:.15s;box-shadow:0 10px 30px rgba(0,0,0,0.22);}
+  .unit:hover{border-color:var(--green);transform:translateY(-2px);}
+  .unit.soon{opacity:.55;pointer-events:none;}
+  .unit .u-no{font-size:12px;font-weight:800;color:var(--green);letter-spacing:.04em;}
+  .unit .u-title{font-size:18px;font-weight:800;margin:6px 0 14px;letter-spacing:-0.02em;}
+  .unit .u-bar{height:6px;border-radius:5px;background:rgba(148,163,184,0.18);overflow:hidden;margin-bottom:6px;}
+  .unit .u-bar > i{display:block;height:100%;width:0%;background:var(--green);border-radius:5px;}
+  .unit .u-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);}
+  .unit .u-go{margin-top:14px;font-size:13px;font-weight:700;color:var(--green);}
+  .intro{margin-top:30px;background:var(--card);border:1px solid var(--border);border-radius:16px;
+    padding:24px 26px;backdrop-filter:blur(10px);}
+  .intro h2{font-size:1.05rem;font-weight:800;letter-spacing:-.01em;margin-bottom:10px;}
+  .intro p{font-size:.93rem;color:var(--muted);margin-bottom:11px;}
+  .intro p:last-child{margin-bottom:0;}
+  .intro strong{color:var(--text);}
+  .intro a{color:var(--green);}
+  .flow{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:14px 0 4px;font-size:.84rem;}
+  .flow .st{background:rgba(148,163,184,.08);border:1px solid var(--border);border-radius:9px;
+    padding:6px 12px;font-weight:700;color:var(--text);}
+  .flow .ar{color:var(--muted);}
+  .foot{text-align:center;color:var(--muted);font-size:12.5px;margin-top:40px;}
+  @media (max-width:600px){.grid{grid-template-columns:1fr;}.cover h1{font-size:30px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="cover">
+    <div class="pro-badge">PRO</div>
+    <h1>Isaac Math · 중2 2학기</h1>
+    <div class="accent"></div>
+    <div class="sub">개념 강의노트 + 인터랙티브 퀴즈 + 연습문제(기본·응용·심화)</div>
+    <div class="overall">
+      <div class="lbl"><span>학기 전체 진행률</span><span id="ovPct">0%</span></div>
+      <div class="bar"><i id="ovBar"></i></div>
+    </div>
+  </div>
+  <div class="grid" id="grid">
+    <a class="unit soon">
+      <div class="u-no">1단원</div>
+      <div class="u-title">삼각형의 성질(1)</div>
+      <div class="u-bar"><i></i></div>
+      <div class="u-meta"><span class="u-pct">준비 중</span><span>곧 공개</span></div>
+      <div class="u-go">제작 중 …</div>
+    </a>
+    <a class="unit soon">
+      <div class="u-no">2단원</div>
+      <div class="u-title">삼각형의 성질(2)</div>
+      <div class="u-bar"><i></i></div>
+      <div class="u-meta"><span class="u-pct">준비 중</span><span>곧 공개</span></div>
+      <div class="u-go">제작 중 …</div>
+    </a>
+    <a class="unit soon">
+      <div class="u-no">3단원</div>
+      <div class="u-title">평행사변형</div>
+      <div class="u-bar"><i></i></div>
+      <div class="u-meta"><span class="u-pct">준비 중</span><span>곧 공개</span></div>
+      <div class="u-go">제작 중 …</div>
+    </a>
+    <a class="unit soon">
+      <div class="u-no">4단원</div>
+      <div class="u-title">여러 가지 사각형</div>
+      <div class="u-bar"><i></i></div>
+      <div class="u-meta"><span class="u-pct">준비 중</span><span>곧 공개</span></div>
+      <div class="u-go">제작 중 …</div>
+    </a>
+    <a class="unit soon">
+      <div class="u-no">5단원</div>
+      <div class="u-title">도형의 닮음</div>
+      <div class="u-bar"><i></i></div>
+      <div class="u-meta"><span class="u-pct">준비 중</span><span>곧 공개</span></div>
+      <div class="u-go">제작 중 …</div>
+    </a>
+    <a class="unit soon">
+      <div class="u-no">6단원</div>
+      <div class="u-title">평행선 사이의 선분의 길이의 비</div>
+      <div class="u-bar"><i></i></div>
+      <div class="u-meta"><span class="u-pct">준비 중</span><span>곧 공개</span></div>
+      <div class="u-go">제작 중 …</div>
+    </a>
+    <a class="unit soon">
+      <div class="u-no">7단원</div>
+      <div class="u-title">삼각형의 무게중심</div>
+      <div class="u-bar"><i></i></div>
+      <div class="u-meta"><span class="u-pct">준비 중</span><span>곧 공개</span></div>
+      <div class="u-go">제작 중 …</div>
+    </a>
+    <a class="unit soon">
+      <div class="u-no">8단원</div>
+      <div class="u-title">피타고라스 정리</div>
+      <div class="u-bar"><i></i></div>
+      <div class="u-meta"><span class="u-pct">준비 중</span><span>곧 공개</span></div>
+      <div class="u-go">제작 중 …</div>
+    </a>
+    <a class="unit soon">
+      <div class="u-no">9단원</div>
+      <div class="u-title">경우의 수</div>
+      <div class="u-bar"><i></i></div>
+      <div class="u-meta"><span class="u-pct">준비 중</span><span>곧 공개</span></div>
+      <div class="u-go">제작 중 …</div>
+    </a>
+    <a class="unit soon">
+      <div class="u-no">10단원</div>
+      <div class="u-title">확률</div>
+      <div class="u-bar"><i></i></div>
+      <div class="u-meta"><span class="u-pct">준비 중</span><span>곧 공개</span></div>
+      <div class="u-go">제작 중 …</div>
+    </a>
+  </div>
+  <div class="intro">
+    <h2>중2 2학기는 이런 학기입니다</h2>
+    <p>중2 1학기가 식과 함수를 다루는 학기였다면, 2학기는 <strong>도형을 논리로 설명하는</strong> 학기입니다. 이등변삼각형의 성질을 합동으로 확인하는 데서 시작해 삼각형의 외심과 내심, 평행사변형과 여러 가지 사각형의 성질로 넓혀 갑니다. 이어서 모양은 같고 크기만 다른 <strong>닮은 도형</strong>을 다루며 평행선 사이의 선분의 길이의 비와 삼각형의 무게중심을 구하고, 직각삼각형의 세 변 사이의 관계인 <strong>피타고라스 정리</strong>에 이릅니다. 마지막 두 단원은 <strong>경우의 수와 확률</strong>입니다 — 빠짐없이, 겹치지 않게 세는 방법을 익힙니다.</p>
+    <p>이 학기의 도형 내용은 <strong>중3의 삼각비와 원의 성질</strong>로, 경우의 수와 확률은 고등 수학의 순열·조합과 확률로 이어집니다.</p>
+    <p><strong>현재 단원을 제작 중입니다.</strong> 완성된 단원부터 차례로 공개됩니다.</p>
+    <h2 style="margin-top:20px;">각 단원은 이렇게 구성됩니다</h2>
+    <div class="flow">
+      <span class="st">개념 6~8섹션</span><span class="ar">→</span>
+      <span class="st">본문 퀴즈</span><span class="ar">→</span>
+      <span class="st">오답노트</span><span class="ar">→</span>
+      <span class="st">연습문제 30~40문항</span>
+    </div>
+    <p style="margin-top:12px;">문항 난이도는 감으로 정하지 않고 <strong>실제 내신 시험지로 맞춥니다</strong>. 모든 정답은 저장 전에 코드로 다시 계산해 대조하고, 그림이 있는 문항은 그림에 그려진 값과 문제에 적힌 값이 일치하는지 스크립트로 전수 검사합니다. 자세한 제작·검증 방식은 <a href="/about.html">사이트 소개</a>에 정리해 두었습니다.</p>
+  </div>
+
+  <div class="foot">
+  <p style="margin-bottom:6px;"><a href="/" style="color:var(--muted);">Isaac Math 홈</a> · <a href="/about.html" style="color:var(--muted);">사이트 소개</a> · <a href="/privacy.html" style="color:var(--muted);">개인정보처리방침</a></p>
+  © Isaac Math · 개인 학습용으로 자유롭게 이용하세요. 무단 복제·재배포는 금합니다.</div>
+</div>
+
+<script>
+function pct(ls,secs){
+  try{const s=JSON.parse(localStorage.getItem(ls));if(s&&Array.isArray(s.done)&&secs)return Math.round(s.done.length/secs*100);}catch(e){}
+  return 0;
+}
+let sum=0,cnt=0;
+document.querySelectorAll('.unit').forEach(a=>{
+  if(a.classList.contains('soon'))return;
+  const p=pct(a.dataset.ls, parseInt(a.dataset.secs,10));
+  sum+=p;cnt++;
+  a.querySelector('.u-bar > i').style.width=p+'%';
+  a.querySelector('.u-pct').textContent='진행률 '+p+'%';
+});
+const ov=cnt?Math.round(sum/cnt):0;
+document.getElementById('ovPct').textContent=ov+'%';
+document.getElementById('ovBar').style.width=ov+'%';
+</script>
+</body>
+</html>
