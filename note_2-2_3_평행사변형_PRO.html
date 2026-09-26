@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) — isaacmath.kr 전용 GA4 속성. faithreason.kr 측정 ID를 재사용하지 말 것 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JS3GE709TF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JS3GE709TF');
+</script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2084707405154770"
+        crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>평행사변형 | 중2 2학기 3단원 | Isaac Math PRO</title>
+<meta name="description" content="평행사변형의 정의와 세 가지 성질, 대각선과 좌표평면 위의 평행사변형, 각의 이등분선이 만드는 이등변삼각형, 중점과 연장선이 만드는 합동, 평행사변형이 되는 다섯 가지 조건, 평행사변형 안의 평행사변형, 대각선과 넓이, 내부의 한 점과 넓이까지 정리한 중2 2학기 3단원 강의노트입니다.">
+<link rel="canonical" href="https://isaacmath.kr/isaacmath_2-2_pro/note_2-2_3_%ED%8F%89%ED%96%89%EC%82%AC%EB%B3%80%ED%98%95_PRO.html">
+<meta property="og:title" content="평행사변형 — 중2 2학기 3단원 강의노트">
+<meta property="og:description" content="평행사변형의 정의와 세 가지 성질, 대각선과 좌표평면 위의 평행사변형, 각의 이등분선이 만드는 이등변삼각형, 중점과 연장선이 만드는 합동, 평행사변형이 되는 다섯 가지 조건, 평행사변형 안의 평행사변형, 대각선과 넓이, 내부의 한 점과 넓이까지 정리한 중2 2학기 3단원 강의노트입니다.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://isaacmath.kr/isaacmath_2-2_pro/note_2-2_3_%ED%8F%89%ED%96%89%EC%82%AC%EB%B3%80%ED%98%95_PRO.html">
+<style>
+  :root {
+    --bg:#0b1220; --bg2:#0f1830; --card:rgba(30,41,66,0.55); --card-solid:#162038;
+    --border:rgba(148,163,184,0.18); --text:#e7ecf3; --muted:#9aa7bd;
+    --green:#34d399; --green-d:#059669; --blue:#60a5fa; --orange:#fbbf24;
+    --red:#f87171; --purple:#c4b5fd; --gold:#fbbf24;
+  }
+  html.light {
+    --bg:#f3f5f9; --bg2:#eef1f7; --card:#ffffff; --card-solid:#ffffff;
+    --border:#e2e8f0; --text:#1a202c; --muted:#5b6675;
+    --green:#0f9d63; --blue:#2563eb; --orange:#c2870b; --red:#dc2626; --purple:#7c3aed;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;
+    background:radial-gradient(1200px 600px at 80% -10%, rgba(52,211,153,0.10), transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, rgba(96,165,250,0.10), transparent 55%), var(--bg);
+    color:var(--text); line-height:1.7; -webkit-font-smoothing:antialiased; transition:background .3s,color .3s; }
+  p { margin-bottom:10px; } strong { color:var(--text); }
+  ul,ol { padding-left:20px; } li { margin-bottom:6px; } sup { font-size:.7em; } em { color:var(--muted); font-style:italic; }
+
+  .progress-bar { position:fixed; top:0; left:0; height:3px; width:0%;
+    background:linear-gradient(90deg,var(--green),var(--gold)); z-index:300; transition:width .1s; }
+
+  .page-header { position:relative; overflow:hidden; border-bottom:1px solid var(--border); }
+  .page-header::before { content:""; position:absolute; inset:0;
+    background:linear-gradient(135deg, rgba(52,211,153,0.16), rgba(96,165,250,0.10) 50%, transparent); }
+  .page-header-inner { position:relative; max-width:820px; margin:0 auto; padding:48px 24px 34px; }
+  .brandline { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .pro-badge { font-size:11px; font-weight:800; letter-spacing:.08em; color:#1a1205;
+    background:linear-gradient(135deg,#fde68a,var(--gold)); padding:4px 10px; border-radius:6px; }
+  .brandline .label { font-size:13px; color:var(--muted); letter-spacing:.02em; }
+  .page-header h1 { font-size:32px; font-weight:800; letter-spacing:-0.03em; line-height:1.2; }
+  .page-header .sub { margin-top:10px; color:var(--muted); font-size:15px; }
+  .header-tools { display:flex; gap:8px; margin-top:18px; align-items:center; flex-wrap:wrap; }
+  .mini-btn { font-size:12.5px; color:var(--text); background:var(--card); border:1px solid var(--border);
+    padding:7px 12px; border-radius:8px; cursor:pointer; backdrop-filter:blur(6px); transition:.15s; }
+  .mini-btn:hover { border-color:var(--green); color:var(--green); }
+
+  .achieve { max-width:820px; margin:18px auto 0; padding:0 24px; }
+  .achieve-card { background:var(--card); border:1px solid var(--border); border-radius:16px;
+    padding:16px 20px; backdrop-filter:blur(10px); display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .ring { --p:0; width:54px; height:54px; border-radius:50%; flex-shrink:0;
+    background:conic-gradient(var(--green) calc(var(--p)*1%), rgba(148,163,184,0.18) 0);
+    display:flex; align-items:center; justify-content:center; }
+  .ring span { width:42px; height:42px; border-radius:50%; background:var(--bg2);
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; color:var(--green); }
+  .achieve-text { flex:1; min-width:160px; }
+  .achieve-text .t { font-weight:700; font-size:15px; } .achieve-text .d { font-size:13px; color:var(--muted); }
+  .badges { display:flex; gap:6px; flex-wrap:wrap; }
+  .ach-badge { font-size:11px; font-weight:700; padding:5px 9px; border-radius:20px;
+    background:rgba(148,163,184,0.12); color:var(--muted); border:1px solid var(--border); }
+  .ach-badge.on { background:rgba(251,191,36,0.16); color:var(--gold); border-color:rgba(251,191,36,0.4); }
+
+  .toc { position:sticky; top:0; z-index:200; background:rgba(11,18,32,0.82); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border); display:flex; justify-content:safe center; gap:2px; overflow-x:auto; padding:0 16px; }
+  html.light .toc { background:rgba(243,245,249,0.85); }
+  .toc a { padding:14px 10px; font-size:12.5px; color:var(--muted); text-decoration:none; white-space:nowrap;
+    border-bottom:2px solid transparent; transition:.2s; }
+  .toc a:hover { color:var(--green); } .toc a.active { color:var(--green); border-bottom-color:var(--green); }
+
+  .content { max-width:820px; margin:0 auto; padding:34px 24px 90px; }
+
+  .section { position:relative; background:var(--card); border:1px solid var(--border); border-radius:18px;
+    padding:30px 30px 26px; margin-bottom:22px; backdrop-filter:blur(10px); box-shadow:0 10px 30px rgba(0,0,0,0.25); }
+  html.light .section { box-shadow:0 6px 20px rgba(15,23,42,0.06); }
+  .section-head { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+  .section-num { width:30px; height:30px; border-radius:9px; flex-shrink:0; font-size:14px; font-weight:800;
+    color:#04140d; background:linear-gradient(135deg,var(--green),var(--green-d)); display:flex; align-items:center; justify-content:center; }
+  .section-title { font-size:21px; font-weight:800; letter-spacing:-0.02em; }
+  .complete-btn { margin-left:auto; font-size:12.5px; font-weight:700; padding:8px 14px; border-radius:9px; cursor:pointer;
+    border:1px solid var(--border); background:transparent; color:var(--muted); transition:.15s; white-space:nowrap; }
+  .complete-btn:hover { border-color:var(--green); color:var(--green); }
+  .section.done { border-color:rgba(52,211,153,0.45); }
+  .section.done .complete-btn { background:rgba(52,211,153,0.14); color:var(--green); border-color:rgba(52,211,153,0.45); }
+
+  .box { border-radius:12px; padding:15px 18px; margin:14px 0; border:1px solid var(--border);
+    border-left-width:4px; background:rgba(148,163,184,0.06); }
+  .box-green { border-left-color:var(--green); background:rgba(52,211,153,0.08); }
+  .box-blue { border-left-color:var(--blue); background:rgba(96,165,250,0.08); }
+  .box-orange { border-left-color:var(--orange); background:rgba(251,191,36,0.08); }
+  .box-red { border-left-color:var(--red); background:rgba(248,113,113,0.08); }
+  .box-purple { border-left-color:var(--purple); background:rgba(196,181,253,0.08); }
+  .box-title { font-weight:800; font-size:13px; margin-bottom:6px; }
+  .box-green .box-title{color:var(--green);} .box-blue .box-title{color:var(--blue);}
+  .box-orange .box-title{color:var(--orange);} .box-red .box-title{color:var(--red);} .box-purple .box-title{color:var(--purple);}
+
+  .special-table { width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px; border-radius:10px; overflow:hidden; }
+  .special-table th { background:rgba(52,211,153,0.16); color:var(--green); padding:10px 12px; text-align:center; font-weight:700; }
+  .special-table td { padding:10px 12px; text-align:center; border-bottom:1px solid var(--border); }
+  .table-wrap { overflow-x:auto; margin:14px 0; }
+  .table-wrap .special-table { margin:0; }
+
+  .formula-big { background:linear-gradient(135deg, rgba(52,211,153,0.10), rgba(196,181,253,0.10));
+    border:2px solid var(--purple); border-radius:14px; padding:22px; text-align:center; margin:16px 0; }
+  .formula-big .f-title { font-size:13px; font-weight:800; color:var(--purple); margin-bottom:10px; }
+  .formula-big .f-body { font-size:20px; font-weight:800; line-height:1.8; }
+  .formula-big .f-desc { font-size:12.5px; color:var(--muted); margin-top:6px; line-height:1.6; }
+
+  .diagram-wrap { text-align:center; margin:16px 0; }
+  .diagram-wrap svg { max-width:100%; height:auto; width:100%; display:block; margin:0 auto; }
+
+  /* ── 2-2 3단원 「평행사변형」 전용 시각자료 CSS (vis2-2-3/_css.txt) ── */
+/* ── 2-2 3단원 「평행사변형」 전용 시각자료 CSS (u3- 접두사) ──
+   공통 안전 변수만 사용: --bg --blue --border --card --green --muted --orange --purple --red --text */
+.u3-wrap{border:1px solid var(--border);border-radius:12px;padding:14px;margin:14px 0;background:var(--card);}
+.u3-cap{font-size:12px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5;}
+.u3-t{font-weight:700;font-size:13px;margin-bottom:10px;color:var(--text);}
+.u3-eq{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:17px;white-space:nowrap;}
+.u3-2col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.u3-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.u3-card{border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;background:var(--bg);overflow-x:auto;}
+.u3-card.on{border-color:var(--green);border-width:2px;}
+.u3-card.off{border-color:var(--red);border-width:2px;}
+.u3-card.pick{border-color:var(--blue);border-width:2px;}
+.u3-lab{font-size:11px;font-weight:700;letter-spacing:.02em;margin-bottom:8px;}
+.u3-lab.g{color:var(--green);} .u3-lab.r{color:var(--red);}
+.u3-lab.b{color:var(--blue);} .u3-lab.o{color:var(--orange);} .u3-lab.p{color:var(--purple);}
+.u3-note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.75;}
+.u3-note .u3-eq,.u3-cap .u3-eq{font-size:13px;}
+.u3-why{font-size:11px;color:var(--red);margin-top:6px;line-height:1.45;}
+.u3-ok{font-size:11px;color:var(--green);margin-top:6px;line-height:1.45;}
+.u3-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.u3-tb{border-collapse:collapse;width:100%;min-width:280px;font-size:13px;}
+.u3-tb th,.u3-tb td{border:1px solid var(--border);padding:7px 9px;text-align:center;}
+.u3-tb th{background:var(--bg);font-weight:700;font-size:12px;color:var(--muted);}
+.u3-tb td.hit{color:var(--green);font-weight:700;}
+.u3-tb td.no{color:var(--red);}
+.u3-tb tr.pick td{background:rgba(52,211,153,.12);}
+.u3-chk{display:flex;gap:9px;align-items:flex-start;margin:7px 0;font-size:13px;line-height:1.55;}
+.u3-num{flex:0 0 20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;
+        font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.u3-num.o{background:var(--orange);} .u3-num.p{background:var(--purple);} .u3-num.g{background:var(--green);}
+.u3-flow{display:flex;flex-direction:column;gap:8px;}
+.u3-arrow{text-align:center;color:var(--muted);font-size:13px;line-height:1;margin:2px 0;}
+.u3-rule{border:0;border-top:2px solid var(--text);margin:5px 0 6px;}
+.u3-hl{background:rgba(96,165,250,.16);border-radius:4px;padding:1px 3px;}
+.u3-hl.o{background:rgba(251,146,60,.18);} .u3-hl.g{background:rgba(52,211,153,.18);}
+.u3-sys{display:grid;grid-template-columns:auto auto;align-items:center;column-gap:6px;justify-content:center;}
+.u3-brace{font-size:40px;line-height:.9;color:var(--muted);font-weight:300;}
+.u3-sys .rows{display:flex;flex-direction:column;gap:5px;}
+/* 식을 항마다 한 칸씩 주는 격자 (정렬에 의존하지 않는다) */
+.u3-eqg{display:grid;justify-content:center;column-gap:3px;row-gap:2px;
+        font-family:"Times New Roman",Georgia,serif;font-size:17px;align-items:baseline;}
+.u3-eqg.add{grid-template-columns:1em 1.5em .9em 1.2em .9em 1.7em auto;}
+.u3-eqg span{text-align:right;font-style:italic;}
+.u3-eqg .sg{text-align:center;font-style:normal;color:var(--orange);font-weight:700;}
+.u3-eqg .mk{text-align:left;font-style:normal;font-size:12px;color:var(--muted);padding-left:6px;}
+.u3-eqg .bar{grid-column:1/7;border-top:2px solid var(--text);height:0;margin:4px 0 5px;}
+.u3-eqg .res{font-style:italic;color:var(--green);font-weight:700;text-align:left;padding-left:8px;}
+.u3-mul{display:grid;grid-template-columns:auto auto auto auto auto;align-items:center;
+        column-gap:7px;row-gap:9px;justify-content:start;}
+.u3-mul .n{font-size:14px;color:var(--muted);}
+.u3-mul .x{font-size:12px;color:var(--orange);font-style:normal;font-weight:700;white-space:nowrap;}
+.u3-mul .ar{color:var(--muted);}
+/* 계수비 판별 (분수 3개를 나란히) */
+.u3-ratio{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;
+          font-family:"Times New Roman",Georgia,serif;font-size:16px;}
+.u3-fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;font-size:.9em;line-height:1.1;margin:0 .2em;}
+.u3-fr .up{padding:0 .3em .1em;font-style:italic;}
+.u3-fr .dn{padding:.12em .3em 0;border-top:1.3px solid var(--text);font-style:italic;}
+.u3-fr.a .up,.u3-fr.a .dn{color:var(--blue);}
+.u3-fr.b .up,.u3-fr.b .dn{color:var(--purple);}
+.u3-fr.c .up,.u3-fr.c .dn{color:var(--orange);}
+.u3-rel{font-size:20px;font-style:normal;color:var(--text);}
+/* 항마다 한 칸 (해부도) */
+.u3-anatg{display:grid;justify-content:center;column-gap:1px;row-gap:6px;padding:4px 0 2px;}
+.u3-eqrow{text-align:center;overflow-x:auto;}
+.u3-anatg .pt{font-family:"Times New Roman",Georgia,serif;font-style:italic;
+          font-size:21px;text-align:center;line-height:1.1;}
+.u3-anatg .pt.op{font-style:normal;color:var(--muted);padding:0 6px;}
+.u3-anatg .tg{font-size:10px;font-style:normal;text-align:center;line-height:1.35;white-space:nowrap;}
+.od{position:relative;display:inline-block;line-height:1}
+.od::after{content:"";position:absolute;left:50%;top:-.42em;width:.2em;height:.2em;
+           margin-left:-.1em;border-radius:50%;background:currentColor}
+@media (max-width:600px){
+  .u3-2col,.u3-3col{grid-template-columns:1fr;}
+  .u3-eqg{font-size:15px;} .u3-eq{font-size:15px;}
+  .u3-anatg .pt{font-size:18px;}
+  .u3-ratio{gap:9px;font-size:14px;}
+}
+
+
+.diagram-wrap svg.dia{width:100%;height:auto;display:block;}
+/* ── 2-2 1단원 추가: 정의·성질 카드 · 증명 흐름 · 조건 판별 ── */
+.u3-def{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.u3-def .u3-card{text-align:left;}
+.u3-def .hd{font-size:12px;font-weight:700;margin-bottom:6px;}
+.u3-def .bd{font-size:13px;line-height:1.65;}
+.u3-prf{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:stretch;}
+.u3-prf .u3-card{text-align:left;font-size:13px;line-height:1.7;}
+.u3-prf .mid{display:flex;flex-direction:column;align-items:center;justify-content:center;
+             font-size:12px;font-weight:700;color:var(--purple);gap:4px;min-width:64px;}
+.u3-prf .mid .ar{font-size:20px;color:var(--muted);line-height:1;}
+.u3-why2{font-size:11px;color:var(--muted);}
+.u3-same{display:flex;flex-direction:column;gap:6px;}
+.u3-same .row{display:flex;gap:9px;align-items:center;border:1px solid var(--border);border-radius:9px;
+              padding:8px 11px;background:var(--bg);font-size:13px;line-height:1.5;}
+.u3-same .eq{color:var(--green);font-weight:700;font-size:15px;flex:0 0 18px;text-align:center;}
+@media (max-width:600px){
+  .u3-def,.u3-prf{grid-template-columns:1fr;}
+  .u3-prf .mid{flex-direction:row;min-width:0;}
+  .u3-prf .mid .ar{transform:rotate(90deg);}
+}
+@media print{ .u3-wrap{break-inside:avoid;page-break-inside:avoid;} }
+  .stepbox { background:rgba(148,163,184,0.06); border-radius:10px; padding:14px 18px; margin:10px 0; border-left:4px solid var(--purple); }
+  .stepbox .step-header { font-size:12px; font-weight:800; color:var(--purple); margin-bottom:6px; }
+
+  .solution { border:1px dashed var(--border); border-radius:12px; padding:16px 18px; margin:14px 0; background:rgba(196,181,253,0.05); }
+  .sol-head { display:flex; align-items:center; gap:8px; font-weight:800; font-size:14px; color:var(--purple); }
+  .sol-q { margin:6px 0 12px; font-weight:600; }
+  .step { display:none; padding:10px 14px; margin:8px 0; border-radius:10px; background:rgba(148,163,184,0.07); border-left:3px solid var(--purple); font-size:14.5px; }
+  .step.show { display:block; animation:fade .3s ease; }
+  @keyframes fade { from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;} }
+  .step .s-label { font-size:11px; font-weight:800; color:var(--purple); letter-spacing:.04em; }
+  .reveal-btn { margin-top:8px; font-size:13px; font-weight:700; padding:9px 16px; border-radius:9px; cursor:pointer; border:1px solid var(--purple); color:var(--purple); background:transparent; transition:.15s; }
+  .reveal-btn:hover { background:rgba(196,181,253,0.14); } .reveal-btn:disabled { opacity:.4; cursor:default; }
+
+  .quiz { background:rgba(148,163,184,0.06); border:1px solid var(--border); border-radius:14px; padding:18px; margin:14px 0; }
+  .quiz-q { font-weight:700; margin-bottom:12px; }
+  .quiz-row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .quiz-input { width:150px; padding:9px 12px; font-size:15px; border-radius:9px; border:1px solid var(--border); background:var(--bg2); color:var(--text); }
+  .quiz-input:focus { outline:none; border-color:var(--green); }
+  .quiz-submit { padding:9px 18px; font-size:14px; font-weight:700; border-radius:9px; cursor:pointer; color:#04140d; background:linear-gradient(135deg,var(--green),var(--green-d)); border:none; }
+  .quiz-hint { font-size:12.5px; color:var(--muted); margin-top:8px; }
+  .quiz-fb { margin-top:10px; font-size:13.5px; font-weight:700; display:none; }
+  .quiz-fb.show { display:block; } .quiz-fb.ok { color:var(--green); } .quiz-fb.ng { color:var(--red); }
+
+  .wrongnote { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px 28px; margin-bottom:22px; backdrop-filter:blur(10px); }
+  .wrongnote h2 { font-size:18px; font-weight:800; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .wrongnote .empty { color:var(--muted); font-size:14px; margin-top:8px; }
+  .wrong-item { padding:12px 14px; border-radius:10px; background:rgba(248,113,113,0.08); border-left:3px solid var(--red); margin-top:10px; font-size:14px; }
+  .wrong-item .wq { font-weight:600; } .wrong-item .wa { font-size:13px; color:var(--muted); margin-top:4px; }
+  .clear-btn { margin-top:14px; font-size:12.5px; padding:7px 12px; border-radius:8px; cursor:pointer; border:1px solid var(--border); background:transparent; color:var(--muted); }
+  .review-btn { margin-top:14px; margin-right:8px; font-size:12.5px; font-weight:700; padding:8px 14px; border-radius:8px; cursor:pointer; border:1px solid var(--purple); background:transparent; color:var(--purple); }
+  .review-btn.done { background:rgba(196,181,253,0.16); }
+
+  .gate { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:28px 30px; margin-bottom:22px; backdrop-filter:blur(10px); }
+  .gate h2 { font-size:19px; font-weight:800; display:flex; align-items:center; gap:8px; }
+  .gate .desc { color:var(--muted); font-size:14px; margin-top:6px; }
+  .checklist { list-style:none; padding:0; margin:18px 0; }
+  .checklist li { display:flex; align-items:center; gap:12px; padding:12px 14px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; font-size:14px; background:rgba(148,163,184,0.05); }
+  .checklist li .mark { width:24px; height:24px; border-radius:50%; border:2px solid var(--muted); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:13px; color:var(--muted); font-weight:800; }
+  .checklist li.ok .mark { border-color:var(--green); background:var(--green); color:#04140d; }
+  .checklist li.ok { border-color:rgba(52,211,153,0.4); }
+  .start-btn { display:inline-block; margin-top:6px; padding:13px 24px; border-radius:11px; font-weight:800; font-size:15px; border:none; cursor:pointer; transition:.15s; }
+  .start-btn.locked { background:rgba(148,163,184,0.15); color:var(--muted); cursor:not-allowed; }
+  .start-btn.open { background:linear-gradient(135deg,var(--green),var(--green-d)); color:#04140d; box-shadow:0 6px 18px rgba(52,211,153,0.25); }
+
+  .practice-wrap { display:none; }
+  .practice-title { font-size:24px; font-weight:800; letter-spacing:-0.02em; margin:8px 0 4px; }
+  .practice-sub { color:var(--muted); font-size:14px; margin-bottom:18px; }
+  .pset { position:relative; background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px 28px; margin-bottom:20px; backdrop-filter:blur(10px); }
+  .pset-head { display:flex; align-items:center; gap:12px; margin-bottom:6px; flex-wrap:wrap; }
+  .diff-badge { font-size:12px; font-weight:800; padding:5px 12px; border-radius:20px; }
+  .diff-basic { background:rgba(96,165,250,0.16); color:var(--blue); }
+  .diff-applied { background:rgba(251,191,36,0.16); color:var(--orange); }
+  .diff-hard { background:rgba(196,181,253,0.16); color:var(--purple); }
+  .pset-title { font-size:18px; font-weight:800; }
+  .pcount { margin-left:auto; font-size:13px; color:var(--muted); font-weight:700; }
+  .pcount.clear { color:var(--green); }
+  .lockmsg { display:none; color:var(--muted); font-size:14px; padding:16px 0 2px; }
+  .pset.locked .pbody { display:none; }
+  .pset.locked .lockmsg { display:block; }
+  .pset.locked { opacity:.9; }
+  .prob { background:rgba(148,163,184,0.06); border:1px solid var(--border); border-radius:12px; padding:14px 16px; margin:10px 0; }
+  .prob .pq { font-weight:600; margin-bottom:10px; font-size:14.5px; }
+  .prob .pnum { color:var(--green); font-weight:800; margin-right:6px; }
+
+  .toast { position:fixed; left:50%; bottom:32px; transform:translateX(-50%) translateY(12px); z-index:400;
+    background:var(--card-solid); border:1px solid var(--border); color:var(--text); padding:12px 18px; border-radius:12px;
+    font-size:13.5px; font-weight:700; box-shadow:0 10px 30px rgba(0,0,0,0.35); opacity:0; transition:opacity .3s, transform .3s; max-width:90vw; text-align:center; }
+  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+  .toast.ok { border-color:rgba(52,211,153,0.5); } .toast.ng { border-color:rgba(248,113,113,0.5); }
+  .confetti-canvas { position:fixed; inset:0; pointer-events:none; z-index:390; }
+  @keyframes wrongflash { 0%{box-shadow:0 0 0 0 rgba(248,113,113,0);} 30%{box-shadow:0 0 0 3px rgba(248,113,113,0.55);} 100%{box-shadow:0 0 0 0 rgba(248,113,113,0);} }
+  .wrongnote.flash { animation:wrongflash .7s ease; }
+
+  @media (max-width:600px) {
+    .page-header-inner{padding:32px 16px 24px;} .page-header h1{font-size:24px;}
+    .content{padding:24px 16px 70px;} .section,.gate,.pset,.wrongnote{padding:22px 18px;}
+  }
+  @media print {
+    :root{--bg:#fff;--bg2:#fff;--card:#fff;--card-solid:#fff;--border:#cbd5e1;--text:#111827;--muted:#475569;--green:#0f9d63;--blue:#2563eb;--orange:#c2870b;--red:#dc2626;--purple:#7c3aed;--gold:#b45309;}
+    body{background:#fff; color:#000;}
+    .progress-bar,.toc,.header-tools,.complete-btn,.reveal-btn,.quiz-submit,.clear-btn,.review-btn,.achieve,.start-btn{display:none!important;}
+    .section,.wrongnote,.gate,.pset{box-shadow:none; border:1px solid #ccc; backdrop-filter:none; break-inside:avoid;}
+    .step{display:block!important;} .practice-wrap{display:block!important;} .pset.locked .pbody{display:block!important;} .lockmsg{display:none!important;}
+  }
+  .unit-nav{max-width:900px;margin:44px auto 0;padding:0 20px;display:grid;
+    grid-template-columns:1fr 1fr;gap:12px;}
+  .unit-nav a{display:flex;flex-direction:column;gap:3px;padding:14px 18px;
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    text-decoration:none;transition:border-color .15s, transform .15s;}
+  .unit-nav a:hover{border-color:var(--green);transform:translateY(-2px);}
+  .unit-nav .un-lbl{font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.03em;}
+  .unit-nav .un-t{font-size:14.5px;font-weight:700;color:var(--text);letter-spacing:-.01em;}
+  .unit-nav .nx{text-align:right;grid-column:2;}
+  @media(max-width:600px){.unit-nav{grid-template-columns:1fr;}.unit-nav .nx{grid-column:1;text-align:left;}}
+  .site-foot{margin:40px auto 0;padding:22px 20px 30px;border-top:1px solid var(--border);
+    text-align:center;font-size:12.5px;color:var(--muted);line-height:1.9;}
+  .site-foot a{color:var(--muted);text-decoration:none;border-bottom:1px dashed var(--border);}
+  .site-foot a:hover{color:var(--green);border-color:var(--green);}
+  .site-foot .sep{margin:0 8px;opacity:.5;}
+
+</style>
+</head>
+<body>
+<div class="progress-bar" id="pbar"></div>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="brandline">
+      <span class="pro-badge">PRO</span>
+      <span class="label">Isaac Math 2-2 강의노트 · 프리미엄</span>
+    </div>
+    <h1>평행사변형</h1>
+    <div class="sub">중2 2학기 3단원, <strong>평행사변형</strong>입니다. 첫째, 도형은 조건을 가장 적게 붙인 것부터 하나씩 늘려 가며 배웁니다 — 삼각형이 이등변삼각형에서 시작했듯이, 사각형은 <strong>평행사변형</strong>에서 시작합니다(한 쌍만 평행한 사다리꼴은 조건이 너무 적어 쓸 만한 성질이 거의 없습니다). 그리고 평행사변형은 앞으로 배울 직사각형·마름모·정사각형의 바탕입니다. 둘째, <strong>정의와 성질을 구별해서, 완성된 문장으로</strong> 외웁니다 — 정의는 하나, 성질은 셋입니다. 셋째, 거꾸로 — 어떻게 하면 평행사변형을 <strong>만들 수 있는가(되는 조건)</strong>는 다섯 가지이고, 그중 하나는 정의·성질에 없던 것이라 따로 외워야 합니다. 시험에 많이 나옵니다. 앞에서 배운 <strong>삼각형의 합동 조건(SSS·SAS·ASA), 이등변삼각형의 성질, 평행선의 엇각·동위각</strong>을 이 단원에서 계속 사용합니다.</div>
+    <div class="header-tools">
+      <button class="mini-btn" onclick="location.href='index.html'">← 학기 목차</button>
+      <button class="mini-btn" onclick="toggleTheme()" id="themeBtn">☀️ 라이트 모드</button>
+      <button class="mini-btn" onclick="window.print()">🖨️ 인쇄 / PDF 저장</button>
+      <button class="mini-btn" onclick="resetAll()">↺ 진행 초기화</button>
+    </div>
+  </div>
+</header>
+
+<div class="achieve">
+  <div class="achieve-card">
+    <div class="ring" id="ring"><span id="ringTxt">0%</span></div>
+    <div class="achieve-text">
+      <div class="t" id="achTitle">학습 진행률</div>
+      <div class="d" id="achDesc">각 섹션을 끝내면 완료 버튼을 눌러 진행률을 채워보세요.</div>
+    </div>
+    <div class="badges">
+      <span class="ach-badge" id="b_first">🔰 첫 완료</span>
+      <span class="ach-badge" id="b_half">🔥 절반 돌파</span>
+      <span class="ach-badge" id="b_master">🏆 단원 마스터</span>
+    </div>
+  </div>
+</div>
+
+<nav class="toc" id="toc">
+  <a href="#s1" class="tlink">① 정의·성질</a>
+  <a href="#s2" class="tlink">② 대각선</a>
+  <a href="#s3" class="tlink">③ 이등분선</a>
+  <a href="#s4" class="tlink">④ 연장선</a>
+  <a href="#s5" class="tlink">⑤ 되는 조건</a>
+  <a href="#s6" class="tlink">⑥ 안의 사각형</a>
+  <a href="#s7" class="tlink">⑦ 넓이(1)</a>
+  <a href="#s8" class="tlink">⑧ 넓이(2)</a>
+  <a href="#wrong" class="tlink">📕 오답노트</a>
+  <a href="#gate" class="tlink">✏️ 연습문제</a>
+</nav>
+
+<div class="content">
+  <section class="section" id="s1">
+    <div class="section-head"><span class="section-num">1</span><span class="section-title">① 평행사변형의 정의와 성질</span>
+      <button class="complete-btn" onclick="toggleDone('s1')">완료하기</button></div>
+<p>사각형에서 마주 보는 변을 <strong>대변</strong>, 마주 보는 각을 <strong>대각</strong>이라 합니다. 평행사변형은 <strong>두 쌍의 대변이 각각 평행한 사각형</strong>입니다 — 이것이 정의입니다. 기호로 쓰면 □ABCD 에서 AB ∥ DC, AD ∥ BC. 이름을 붙일 때는 꼭짓점을 <strong>돌아가는 순서대로</strong> 읽습니다(A → B → C → D). 그래서 AB 와 마주 보는 변은 DC, ∠A 와 마주 보는 각은 ∠C 입니다.</p>
+<!-- ============ 평행사변형 — 정의 하나, 성질 셋 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">평행사변형 — 정의 하나, 성질 셋</div>
+<div class="u3-def">
+ <div class="u3-card on"><div class="hd" style="color:var(--green)">정의 (약속)</div>
+  <div class="bd">두 쌍의 대변이 각각 <b>평행한</b> 사각형<br><span class="u3-why2">AB ∥ DC, AD ∥ BC</span></div></div>
+ <div class="u3-card pick"><div class="hd" style="color:var(--blue)">성질 (정의에서 따라 나오는 것)</div>
+  <div class="bd">성질 1 — 두 쌍의 대변의 <b>길이</b>가 각각 같다<br>성질 2 — 두 쌍의 대각의 <b>크기</b>가 각각 같다<br>성질 3 — 두 대각선이 서로를 <b>이등분</b>한다</div></div>
+</div>
+<div class="u3-note" style="text-align:center">덤으로 알아 두면 편한 것 — <b>이웃한 두 각의 크기의 합은 180°</b></div>
+<div class="u3-cap">왼쪽 카드는 기호로, 오른쪽 카드는 문장으로 외운다.</div>
+</div>
+<p>수업에서 특히 강조한 것: <strong>정의와 성질을 섞어서 외우면 안 됩니다.</strong> 시험에서 「정의」를 물었는데 성질을 쓰면 틀립니다. 성질이 왜 성립하는지는 바로 다음에 증명합니다.</p>
+<!-- ============ 평행사변형의 세 가지 성질 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">평행사변형의 세 가지 성질</div>
+<div class="u3-3col"><div class="u3-card"><div class="u3-lab b">두 쌍의 대변의 길이가 같다</div><div class="diagram-wrap" style="max-width:227px;margin:6px auto 0"><svg class="dia" viewBox="15 4 227 142" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><line x1="79.9" y1="40.0" x2="40.0" y2="115.1" stroke="var(--blue)" stroke-width="2.6" stroke-linecap="round"/><line x1="215.9" y1="40.0" x2="176.0" y2="115.1" stroke="var(--blue)" stroke-width="2.6" stroke-linecap="round"/><line x1="79.9" y1="40.0" x2="215.9" y2="40.0" stroke="var(--orange)" stroke-width="2.6" stroke-linecap="round"/><line x1="40.0" y1="115.1" x2="176.0" y2="115.1" stroke="var(--orange)" stroke-width="2.6" stroke-linecap="round"/><line x1="63.5" y1="79.4" x2="56.4" y2="75.6" stroke="var(--blue)" stroke-width="1.6"/><line x1="199.5" y1="79.4" x2="192.4" y2="75.6" stroke="var(--blue)" stroke-width="1.6"/><line x1="145.9" y1="36.0" x2="145.9" y2="44.0" stroke="var(--orange)" stroke-width="1.6"/><line x1="149.9" y1="36.0" x2="149.9" y2="44.0" stroke="var(--orange)" stroke-width="1.6"/><line x1="106.0" y1="111.1" x2="106.0" y2="119.1" stroke="var(--orange)" stroke-width="1.6"/><line x1="110.0" y1="111.1" x2="110.0" y2="119.1" stroke="var(--orange)" stroke-width="1.6"/><text x="70.4" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="132.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="189.4" y="133.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="227.9" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text></svg></div></div><div class="u3-card"><div class="u3-lab o">두 쌍의 대각의 크기가 같다</div><div class="diagram-wrap" style="max-width:227px;margin:6px auto 0"><svg class="dia" viewBox="15 4 227 142" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="79.9,40.0 40.0,115.1 176.0,115.1 215.9,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><polyline points="72.9,53.2 74.4,54.0 76.1,54.5 77.7,54.8 79.4,55.0 81.2,54.9 82.9,54.7 84.5,54.3 86.1,53.7 87.6,52.9 89.0,51.9 90.3,50.8 91.5,49.5 92.5,48.1 93.4,46.6 94.0,45.0 94.5,43.4 94.8,41.7 94.9,40.0" fill="none" stroke="var(--orange)" stroke-width="1.6"/><polyline points="183.0,101.8 181.5,101.1 179.9,100.6 178.2,100.2 176.5,100.1 174.8,100.1 173.1,100.3 171.4,100.8 169.8,101.4 168.3,102.2 166.9,103.2 165.6,104.3 164.4,105.5 163.4,106.9 162.5,108.4 161.9,110.0 161.4,111.6 161.1,113.3 161.0,115.1" fill="none" stroke="var(--orange)" stroke-width="1.6"/><polyline points="54.0,115.1 54.0,114.2 53.9,113.4 53.8,112.5 53.6,111.7 53.4,110.9 53.1,110.1 52.8,109.3 52.4,108.6 52.0,107.8 51.5,107.1 51.0,106.5 50.5,105.8 49.9,105.2 49.3,104.6 48.7,104.1 48.0,103.6 47.3,103.1 46.6,102.7" fill="none" stroke="var(--blue)" stroke-width="1.6"/><polyline points="57.6,115.1 57.6,114.0 57.5,112.9 57.3,111.9 57.1,110.9 56.8,109.8 56.5,108.8 56.1,107.9 55.6,106.9 55.1,106.0 54.5,105.1 53.9,104.2 53.2,103.4 52.5,102.7 51.7,101.9 50.9,101.2 50.1,100.6 49.2,100.0 48.3,99.5" fill="none" stroke="var(--blue)" stroke-width="1.6"/><polyline points="201.9,40.0 201.9,40.8 202.0,41.7 202.1,42.5 202.3,43.3 202.5,44.1 202.8,44.9 203.1,45.7 203.5,46.5 203.9,47.2 204.4,47.9 204.9,48.6 205.4,49.2 206.0,49.9 206.6,50.4 207.2,51.0 207.9,51.5 208.6,51.9 209.3,52.4" fill="none" stroke="var(--blue)" stroke-width="1.6"/><polyline points="198.3,40.0 198.3,41.1 198.4,42.1 198.6,43.2 198.8,44.2 199.1,45.2 199.4,46.2 199.8,47.2 200.3,48.1 200.8,49.1 201.4,50.0 202.0,50.8 202.7,51.6 203.4,52.4 204.2,53.1 205.0,53.8 205.8,54.4 206.7,55.0 207.6,55.5" fill="none" stroke="var(--blue)" stroke-width="1.6"/><text x="70.4" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="132.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="189.4" y="133.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="227.9" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text></svg></div></div><div class="u3-card"><div class="u3-lab p">두 대각선이 서로를 이등분한다</div><div class="diagram-wrap" style="max-width:227px;margin:6px auto 0"><svg class="dia" viewBox="15 4 227 142" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="79.9,40.0 40.0,115.1 176.0,115.1 215.9,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="79.9" y1="40.0" x2="176.0" y2="115.1" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/><line x1="40.0" y1="115.1" x2="215.9" y2="40.0" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/><line x1="106.4" y1="55.6" x2="101.5" y2="61.9" stroke="var(--orange)" stroke-width="1.6"/><line x1="154.4" y1="93.1" x2="149.5" y2="99.4" stroke="var(--orange)" stroke-width="1.6"/><line x1="80.6" y1="93.4" x2="83.7" y2="100.8" stroke="var(--blue)" stroke-width="1.6"/><line x1="84.2" y1="91.8" x2="87.4" y2="99.2" stroke="var(--blue)" stroke-width="1.6"/><line x1="168.5" y1="55.9" x2="171.7" y2="63.2" stroke="var(--blue)" stroke-width="1.6"/><line x1="172.2" y1="54.3" x2="175.3" y2="61.7" stroke="var(--blue)" stroke-width="1.6"/><circle cx="128.0" cy="77.5" r="2.6" fill="var(--text)"/><text x="128.0" y="103.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">O</text><text x="70.4" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="132.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="189.4" y="133.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="227.9" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text></svg></div></div></div>
+<div class="u3-cap">왼쪽: 같은 색 변끼리 평행하고, 같은 표시끼리 길이가 같다. 가운데: 같은 표시의 각끼리 크기가 같다. 오른쪽: O 는 두 대각선의 교점이다.</div>
+</div>
+<p>이웃한 두 각의 합이 180° 인 이유는 이렇습니다 — 대각끼리 같으니 네 각은 ∠A, ∠B, ∠A, ∠B 이고, 합이 360° 이므로 ∠A + ∠B = 180°. 이것은 성질 2 와 「사각형의 내각의 합은 360°」에서 바로 따라 나오므로 따로 번호를 붙이지 않습니다.</p>
+<div class="box box-red"><div class="box-title">⚠ 거꾸로는 성립하지 않는다</div>
+<p style="margin-bottom:0">어느 한 쌍의 이웃한 두 각의 합이 180° 라는 것만으로는 평행사변형이라고 할 수 없습니다 — 한 쌍만 평행한 사다리꼴도 그렇습니다.</p>
+</div>
+<p>성질을 쓰는 문제는 구하려는 것과 <strong>마주 보는 것</strong> 또는 <strong>이웃한 것</strong>을 먼저 찾는 데서 시작합니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:4px">평행사변형 ABCD 에서 ∠A = 110° 이면 대각인 ∠C = 110°, 이웃한 ∠B 는 180° &minus; 110° = 70°, ∠D = ∠B = 70°.</p>
+<p style="margin-bottom:4px">평행사변형 ABCD 에서 AB = 5 cm, BC = 8 cm 이면 CD = 5 cm, AD = 8 cm 이므로 둘레는 2 &times; (5 + 8) = 26 cm.</p>
+<p style="margin-bottom:0">평행사변형 ABCD 에서 ∠A : ∠B = 2 : 1 이면, ∠A + ∠B = 180° 이므로 180° 를 2 : 1 로 나눠 ∠A = 120°, ∠B = 60°.</p>
+</div>
+    <div class="quiz" data-qid="b1" data-ans="105" data-type="num">
+      <div class="quiz-q">Q. 평행사변형 ABCD 에서 ∠A : ∠B = 7 : 5 일 때, ∠C 의 크기를 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 이웃한 두 각의 합은 180° 이고, 마주 보는 각은 크기가 같다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b2" data-ans="11" data-type="num">
+      <div class="quiz-q">Q. 평행사변형 ABCD 의 둘레의 길이가 38 cm 이고 AB = 8 cm 일 때, BC 의 길이는 몇 cm 인지 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 둘레 = 2 × (이웃한 두 변의 길이의 합).</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s2">
+    <div class="section-head"><span class="section-num">2</span><span class="section-title">② 대각선은 서로를 이등분한다 — 좌표평면 위의 평행사변형</span>
+      <button class="complete-btn" onclick="toggleDone('s2')">완료하기</button></div>
+<p>평행사변형의 세 가지 성질이 왜 성립하는지 대각선으로 확인해 봅니다.</p>
+<!-- ============ 대각선 AC 로 나눈 두 삼각형 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">대각선 AC 로 나눈 두 삼각형</div>
+<div class="diagram-wrap" style="max-width:282px;margin:10px auto"><svg class="dia" viewBox="15 4 282 163" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="95.0,40.0 216.0,135.3 271.0,40.0" fill="var(--green)" fill-opacity="0.15" stroke="none"/><polygon points="95.0,40.0 40.0,135.3 216.0,135.3" fill="var(--blue)" fill-opacity="0.15" stroke="none"/><polygon points="95.0,40.0 40.0,135.3 216.0,135.3 271.0,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="95.0" y1="40.0" x2="216.0" y2="135.3" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round"/><circle cx="99.5" cy="63.6" r="2.4" fill="var(--orange)"/><circle cx="211.5" cy="111.7" r="2.4" fill="var(--orange)"/><line x1="120.1" y1="46.6" x2="126.5" y2="53.0" stroke="var(--orange)" stroke-width="1.6"/><line x1="120.1" y1="53.0" x2="126.5" y2="46.6" stroke="var(--orange)" stroke-width="1.6"/><line x1="184.5" y1="122.2" x2="190.9" y2="128.6" stroke="var(--orange)" stroke-width="1.6"/><line x1="184.5" y1="128.6" x2="190.9" y2="122.2" stroke="var(--orange)" stroke-width="1.6"/><text x="85.5" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="152.7" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="229.4" y="154.1" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="283.0" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text></svg></div>
+<div class="u3-cap">●끼리는 AB ∥ DC 에서 생긴 엇각, ×끼리는 AD ∥ BC 에서 생긴 엇각이다.</div>
+</div>
+<p>성질 1·2 가 성립하는 이유: △ABC 와 △CDA 에서 엇각 두 쌍이 같고 AC 는 공통이므로 ASA 합동. 합동인 두 삼각형의 대응변·대응각에서 AB = CD, BC = DA, ∠B = ∠D 가 나옵니다. (∠A = ∠C 는 두 엇각의 합으로 나옵니다.)</p>
+<p>성질 3 이 성립하는 이유: 두 대각선의 교점을 O 라 하면 △OAB 와 △OCD 에서 AB = CD(성질 1), ∠OAB = ∠OCD, ∠OBA = ∠ODC(엇각)이므로 ASA 합동 → OA = OC, OB = OD.</p>
+<div class="box box-orange"><div class="box-title">⚠ 주의</div>
+<p style="margin-bottom:0">「서로를 이등분한다」는 말은 두 대각선의 길이가 같다는 뜻이 아닙니다. AC 와 BD 는 길이가 다를 수 있고, 각자 O 에서 반으로 나뉠 뿐입니다.</p>
+</div>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">평행사변형 ABCD 의 두 대각선의 교점을 O 라 하자. AC = 10 cm, BD = 12 cm, AB = 7 cm 이면 OA = 5 cm, OB = 6 cm 이므로 △OAB 의 둘레는 5 + 6 + 7 = 18 cm.</p>
+</div>
+    <div class="quiz" data-qid="b3" data-ans="13" data-type="num">
+      <div class="quiz-q">Q. 평행사변형 ABCD 의 두 대각선의 교점을 O 라 하자. AC = 18 cm, BD = 24 cm 이고 △OBC 의 둘레의 길이가 34 cm 일 때, BC 의 길이는 몇 cm 인지 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 대각선은 교점 O 에서 반으로 나뉜다. 삼각형의 세 변 중 두 변이 대각선의 절반이다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+<!-- ============ 좌표평면 위의 평행사변형 ABCD ============ -->
+<div class="u3-wrap">
+<div class="u3-t">좌표평면 위의 평행사변형 ABCD</div>
+<div class="diagram-wrap" style="max-width:372px;margin:14px auto"><svg class="dia" viewBox="0 0 372 262" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="206.0" x2="346.0" y2="206.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="60.0" y1="232.0" x2="60.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="355.0" y="210.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="60.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="49.0" y="223.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="138.0" y1="50.0" x2="112.0" y2="154.0" stroke="var(--text)" stroke-width="2.0"/><line x1="112.0" y1="154.0" x2="268.0" y2="154.0" stroke="var(--text)" stroke-width="2.0"/><line x1="268.0" y1="154.0" x2="294.0" y2="50.0" stroke="var(--text)" stroke-width="2.0"/><line x1="294.0" y1="50.0" x2="138.0" y2="50.0" stroke="var(--text)" stroke-width="2.0"/><line x1="112.0" y1="154.0" x2="112.0" y2="50.0" stroke="var(--purple)" stroke-width="1.3" stroke-dasharray="5,4"/><line x1="112.0" y1="50.0" x2="138.0" y2="50.0" stroke="var(--purple)" stroke-width="1.3" stroke-dasharray="5,4"/><line x1="268.0" y1="154.0" x2="294.0" y2="154.0" stroke="var(--purple)" stroke-width="1.3" stroke-dasharray="5,4"/><line x1="294.0" y1="154.0" x2="294.0" y2="50.0" stroke="var(--purple)" stroke-width="1.3" stroke-dasharray="5,4"/><circle cx="138.0" cy="50.0" r="3.6" fill="var(--text)"/><text x="142.0" y="37.0" font-size="11" fill="var(--text)" text-anchor="start">A(3, 6)</text><circle cx="112.0" cy="154.0" r="3.6" fill="var(--text)"/><text x="118.0" y="176.0" font-size="11" fill="var(--text)" text-anchor="start">B(2, 2)</text><circle cx="268.0" cy="154.0" r="3.6" fill="var(--text)"/><text x="262.0" y="176.0" font-size="11" fill="var(--text)" text-anchor="end">C(8, 2)</text><circle cx="294.0" cy="50.0" r="3.6" fill="var(--orange)"/><text x="302.0" y="41.0" font-size="11" fill="var(--orange)" text-anchor="start">D</text><text x="125.0" y="38.0" font-size="12" fill="var(--purple)" text-anchor="middle">+1</text><text x="103.0" y="106.0" font-size="12" fill="var(--purple)" text-anchor="end">+4</text><text x="279.0" y="176.0" font-size="12" fill="var(--purple)" text-anchor="middle">+1</text><text x="303.0" y="106.0" font-size="12" fill="var(--purple)" text-anchor="start">+4</text></svg></div>
+<div class="u3-cap">B 에서 A 로 가는 방법(보라색 점선)을 C 에서 그대로 따라가면 D 에 닿는다.</div>
+</div>
+<p>좌표평면에서는 평행사변형의 대변이 평행하고 길이가 같으므로 <strong>B 에서 A 로 옮긴 만큼 C 에서 옮기면 D</strong> 가 됩니다. 한 꼭짓점의 좌표를 모를 때 이렇게 구합니다. 고등학교에서는 같은 성질을 「두 대각선의 <strong>중점이 일치한다</strong>」로 표현합니다.</p>
+<p style="margin-bottom:0">위 그림처럼 B 에서 A 로 간 만큼 C 에서 가면 D 는 (9, 6) 이다.</p>
+    <div class="quiz" data-qid="b4" data-ans="14" data-type="num">
+      <div class="quiz-q">Q. 좌표평면 위의 세 점 A(1, 4), B(&minus;2, &minus;1), C(7, &minus;1) 에 대하여 □ABCD 가 평행사변형이 되도록 하는 점 D 의 좌표를 (a, b) 라 할 때, a + b 의 값을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: B 에서 A 로 가려면 x좌표·y좌표가 각각 얼마나 변하는지 보고, C 에서 똑같이 옮긴다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s3">
+    <div class="section-head"><span class="section-num">3</span><span class="section-title">③ 각의 이등분선이 만드는 이등변삼각형</span>
+      <button class="complete-btn" onclick="toggleDone('s3')">완료하기</button></div>
+<p>시험에 가장 자주 나오는 평행사변형 그림입니다. 한 각의 이등분선을 그으면 <strong>평행선 때문에 엇각이 하나 더 생겨</strong> 같은 각이 세 개가 되고, 그중 두 개를 밑각으로 가진 <strong>이등변삼각형</strong>이 생깁니다.</p>
+<p>그래서 「이등분선」이 보이면 가장 먼저 <strong>엇각을 옮겨 표시</strong>하고, 이등변삼각형의 두 변(같은 길이)을 찾습니다. 그다음 평행사변형의 대변의 길이가 같다는 것으로 나머지 길이를 구합니다.</p>
+<!-- ============ ∠A 의 이등분선이 BC 와 만나는 점 E ============ -->
+<div class="u3-wrap">
+<div class="u3-t">∠A 의 이등분선이 BC 와 만나는 점 E</div>
+<div class="diagram-wrap" style="max-width:275px;margin:10px auto"><svg class="dia" viewBox="15 4 275 163" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="83.8,40.0 40.0,129.9 140.0,129.9" fill="var(--orange)" fill-opacity="0.14" stroke="none"/><polygon points="83.8,40.0 40.0,129.9 220.0,129.9 263.8,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="83.8" y1="40.0" x2="140.0" y2="129.9" stroke="var(--orange)" stroke-width="2.0" stroke-linecap="round"/><circle cx="85.0" cy="62.0" r="2.4" fill="var(--orange)"/><circle cx="103.1" cy="50.7" r="2.4" fill="var(--orange)"/><circle cx="120.8" cy="119.2" r="2.4" fill="var(--orange)"/><line x1="65.5" y1="86.7" x2="58.3" y2="83.2" stroke="var(--orange)" stroke-width="1.6"/><line x1="90.0" y1="125.9" x2="90.0" y2="133.9" stroke="var(--orange)" stroke-width="1.6"/><text x="74.3" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="147.3" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="233.4" y="148.7" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="275.9" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="140.0" y="154.3" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">E</text></svg></div>
+<div class="u3-cap">A 의 두 ● 는 이등분선이 나눈 두 각이고, E 의 ● 는 AD ∥ BC 에서 생긴 엇각이다. 주황색 삼각형의 두 변에 같은 표시를 했다.</div>
+</div>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">평행사변형 ABCD 에서 AB = 6 cm, BC = 10 cm 이고 ∠A 의 이등분선이 BC 와 만나는 점을 E 라 하자. △ABE 가 이등변삼각형이므로 BE = AB = 6 cm, EC = 10 &minus; 6 = 4 cm.</p>
+</div>
+<!-- ============ 이웃한 두 각 ∠A, ∠B 의 이등분선 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">이웃한 두 각 ∠A, ∠B 의 이등분선</div>
+<div class="diagram-wrap" style="max-width:291px;margin:10px auto"><svg class="dia" viewBox="15 4 291 170" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="90.0,40.0 40.0,142.5 230.0,142.5 280.0,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="90.0" y1="40.0" x2="122.0" y2="91.2" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round"/><line x1="40.0" y1="142.5" x2="122.0" y2="91.2" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round"/><circle cx="91.1" cy="62.0" r="2.4" fill="var(--orange)"/><circle cx="109.2" cy="50.7" r="2.4" fill="var(--orange)"/><line x1="51.5" y1="122.9" x2="57.9" y2="129.3" stroke="var(--blue)" stroke-width="1.6"/><line x1="51.5" y1="129.3" x2="57.9" y2="122.9" stroke="var(--blue)" stroke-width="1.6"/><line x1="57.9" y1="133.2" x2="64.3" y2="139.6" stroke="var(--blue)" stroke-width="1.6"/><line x1="57.9" y1="139.6" x2="64.3" y2="133.2" stroke="var(--blue)" stroke-width="1.6"/><polyline points="117.2,83.6 109.6,88.4 114.4,96.0" fill="none" stroke="var(--text)" stroke-width="1.4"/><text x="80.5" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="159.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="243.4" y="161.3" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="292.0" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="135.0" y="104.1" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">P</text></svg></div>
+<div class="u3-cap">● 두 개와 × 두 개를 더하면 ∠A + ∠B 다. △ABP 에는 ● 하나와 × 하나만 들어 있다.</div>
+</div>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">평행사변형 ABCD 에서 ∠A 와 ∠B 의 이등분선이 만나는 점을 P 라 하면, ∠PAB + ∠PBA = ½(∠A + ∠B) = ½ × 180° = 90° 이므로 ∠APB = 90° — 이웃한 두 각의 이등분선은 수직으로 만납니다.</p>
+</div>
+<p>∠B 가 60° 처럼 특별한 각이면 이등변삼각형이 <strong>정삼각형</strong>이 되어 세 변이 모두 같아집니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">평행사변형 ABCD 에서 ∠B = 60° 이고 ∠A 의 이등분선이 BC 와 만나는 점을 E 라 하면, ∠A = 120° 이므로 ∠BAE = 60° 이고 △ABE 의 세 각이 모두 60° — 정삼각형이라 AE = BE = AB.</p>
+</div>
+    <div class="quiz" data-qid="b5" data-ans="17" data-type="num">
+      <div class="quiz-q">Q. 평행사변형 ABCD 에서 ∠D 의 이등분선이 BC 와 만나는 점을 E 라 하자. AB = 7 cm, AD = 24 cm 일 때, BE 의 길이는 몇 cm 인지 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 이등분선이 만든 엇각을 표시해 이등변삼각형을 찾는다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b6" data-ans="16" data-type="num">
+      <div class="quiz-q">Q. 평행사변형 ABCD 에서 ∠A 와 ∠D 의 이등분선이 변 BC 위의 한 점 E 에서 만난다. AB = 8 cm 일 때, AD 의 길이는 몇 cm 인지 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 두 이등분선이 각각 이등변삼각형을 하나씩 만든다. BC 를 두 조각으로 나눠 본다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s4">
+    <div class="section-head"><span class="section-num">4</span><span class="section-title">④ 중점과 연장선 — 합동으로 길이와 넓이 옮기기</span>
+      <button class="complete-btn" onclick="toggleDone('s4')">완료하기</button></div>
+<p>「한 변의 중점」과 「연장선」이 함께 나오면 <strong>중점을 꼭짓점으로 하는 두 삼각형이 합동</strong>입니다 — 중점이라 한 변이 같고, 맞꼭지각과 엇각이 같으므로 ASA 합동입니다.</p>
+<!-- ============ AD 의 중점 E 와 BE 의 연장선 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">AD 의 중점 E 와 BE 의 연장선</div>
+<div class="diagram-wrap" style="max-width:268px;margin:10px auto"><svg class="dia" viewBox="15 9 268 226" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="220.6,122.2 257.2,40.0 148.6,122.2" fill="var(--blue)" fill-opacity="0.16" stroke="none"/><polygon points="76.6,122.2 40.0,204.4 148.6,122.2" fill="var(--blue)" fill-opacity="0.16" stroke="none"/><polygon points="76.6,122.2 40.0,204.4 184.0,204.4 220.6,122.2" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="40.0" y1="204.4" x2="257.2" y2="40.0" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round"/><line x1="220.6" y1="122.2" x2="257.2" y2="40.0" stroke="var(--text)" stroke-width="2.0" stroke-dasharray="5,4" stroke-linecap="round"/><line x1="112.6" y1="118.2" x2="112.6" y2="126.2" stroke="var(--green)" stroke-width="1.6"/><line x1="184.6" y1="118.2" x2="184.6" y2="126.2" stroke="var(--green)" stroke-width="1.6"/><circle cx="86.4" cy="137.3" r="2.4" fill="var(--orange)"/><circle cx="210.8" cy="107.1" r="2.4" fill="var(--orange)"/><polyline points="136.6,122.2 136.6,122.7 136.6,123.1 136.7,123.5 136.7,123.9 136.8,124.4 136.9,124.8 137.0,125.2 137.1,125.6 137.2,126.0 137.4,126.4 137.5,126.8 137.7,127.2 137.9,127.6 138.1,128.0 138.3,128.4 138.5,128.8 138.8,129.1 139.0,129.5" fill="none" stroke="var(--purple)" stroke-width="1.6"/><polyline points="160.6,122.2 160.6,121.8 160.6,121.4 160.5,120.9 160.5,120.5 160.4,120.1 160.3,119.6 160.2,119.2 160.1,118.8 160.0,118.4 159.8,118.0 159.7,117.6 159.5,117.2 159.3,116.8 159.1,116.4 158.9,116.0 158.7,115.7 158.4,115.3 158.2,115.0" fill="none" stroke="var(--purple)" stroke-width="1.6"/><text x="67.1" y="111.2" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="221.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="196.0" y="221.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="237.3" y="130.6" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="144.8" y="106.0" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">E</text><text x="269.2" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">F</text></svg></div>
+<div class="u3-cap">E 는 AD 의 중점이고, 같은 표시끼리 크기가 같다. 파란 두 삼각형을 비교해 보자.</div>
+</div>
+<p>합동이면 두 가지를 옮길 수 있습니다. 첫째 <strong>길이</strong>(연장된 부분의 길이 = 평행사변형의 한 변), 둘째 <strong>넓이</strong>(잘려 나간 삼각형을 반대편으로 옮겨 붙여도 넓이가 같습니다).</p>
+<p>넓이 문제에서는 「잘라서 옮겨 붙이면 무엇과 같아지는가」를 먼저 생각합니다.</p>
+<p>넓이 계산에 필요한 두 가지(뒤에서 다시 자세히 봅니다): 평행사변형의 넓이는 <strong>(밑변) × (높이)</strong> 이고, 평행사변형의 한 변을 밑변으로 하고 <strong>마주 보는 변 위의 한 점</strong>을 꼭짓점으로 하는 삼각형의 넓이는 <strong>평행사변형 넓이의 ½</strong> 입니다(밑변과 높이가 같으므로).</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:4px">위 그림과 같은 모양의 평행사변형 ABCD 에서 E 는 AD 의 중점이고, BE 의 연장선이 CD 의 연장선과 만나는 점이 F 다. △ABE ≡ △DFE 이므로 DF = AB. AB = 6 cm 이면 DF = 6 cm, CF = CD + DF = 6 + 6 = 12 cm.</p>
+<p style="margin-bottom:0">평행사변형 ABCD 에서 E 가 CD 의 중점이고 AE 의 연장선이 BC 의 연장선과 만나는 점이 F 이면, △AED ≡ △FEC(ASA)이므로 △ABF 는 □ABCD 에서 △AED 를 떼어 △FEC 자리에 붙인 모양입니다. □ABCD 의 넓이가 36 cm² 이면 △ABF 의 넓이도 36 cm².</p>
+</div>
+    <div class="quiz" data-qid="b7" data-ans="20" data-type="num">
+      <div class="quiz-q">Q. 평행사변형 ABCD 에서 점 E 는 CD 의 중점이고, AE 의 연장선과 BC 의 연장선이 만나는 점을 F 라 하자. AD = 10 cm 일 때, BF 의 길이는 몇 cm 인지 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 중점을 꼭짓점으로 하는 두 삼각형이 합동이다(ASA).</div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b8" data-ans="21" data-type="num">
+      <div class="quiz-q">Q. 평행사변형 ABCD 에서 점 E 는 CD 의 중점이고, AE 의 연장선과 BC 의 연장선이 만나는 점을 F 라 하자. □ABCD 의 넓이가 84 cm² 일 때, △ECF 의 넓이는 몇 cm² 인지 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 합동인 두 삼각형을 찾는다. E 가 CD 의 중점이면 E 에서 AD 까지의 거리는 평행사변형의 높이의 얼마인지 본다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s5">
+    <div class="section-head"><span class="section-num">5</span><span class="section-title">⑤ 평행사변형이 되는 조건</span>
+      <button class="complete-btn" onclick="toggleDone('s5')">완료하기</button></div>
+<p>지금까지는 「평행사변형이면 → 이런 성질이 있다」였습니다. 이제 방향을 뒤집어 「사각형이 이런 조건을 만족하면 → 평행사변형이다」를 봅니다.</p>
+<!-- ============ □ABCD 가 평행사변형이 되는 조건 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">□ABCD 가 평행사변형이 되는 조건</div>
+<div class="u3-scroll"><table class="u3-tb">
+ <tr><th></th><th>조건</th><th>어디서 왔나</th></tr>
+ <tr><td>1</td><td>두 쌍의 대변이 각각 평행하다</td><td>정의</td></tr>
+ <tr><td>2</td><td>두 쌍의 대변의 길이가 각각 같다</td><td>성질 1</td></tr>
+ <tr><td>3</td><td>두 쌍의 대각의 크기가 각각 같다</td><td>성질 2</td></tr>
+ <tr><td>4</td><td>두 대각선이 서로를 이등분한다</td><td>성질 3</td></tr>
+ <tr class="pick"><td>5</td><td><b>한 쌍의 대변이 평행하고, 그 길이가 같다</b></td><td class="hit">새로 외울 것</td></tr>
+</table></div>
+<div class="u3-cap">1~4 는 정의와 성질을 거꾸로 읽은 것이다.</div>
+</div>
+<div class="box box-orange"><div class="box-title">📌 수업에서 특히 강조한 것</div>
+<p style="margin-bottom:0">조건 5 는 정의·성질 어디에도 없던 새로운 것이라 <strong>시험에 많이 나옵니다.</strong></p>
+</div>
+<div class="box box-red"><div class="box-title">⚠ 조건 5 의 함정</div>
+<p style="margin-bottom:0">「AB ∥ DC 이고 AD = BC」처럼 평행한 변과 길이가 같은 변이 <strong>서로 다른 쌍</strong>이면 평행사변형이 아닐 수 있습니다 — 윗변과 아랫변이 평행하고 양옆의 길이가 같은 사다리꼴이 그런 모양입니다.</p>
+</div>
+<!-- ============ ∠ABD = ∠CDB 일 때 평행한 두 변 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">∠ABD = ∠CDB 일 때 평행한 두 변</div>
+<div class="diagram-wrap" style="max-width:255px;margin:10px auto"><svg class="dia" viewBox="15 4 255 157" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><line x1="83.8" y1="40.0" x2="243.8" y2="40.0" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round"/><line x1="40.0" y1="129.9" x2="200.0" y2="129.9" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round"/><line x1="83.8" y1="40.0" x2="40.0" y2="129.9" stroke="var(--blue)" stroke-width="2.6" stroke-linecap="round"/><line x1="243.8" y1="40.0" x2="200.0" y2="129.9" stroke="var(--blue)" stroke-width="2.6" stroke-linecap="round"/><line x1="40.0" y1="129.9" x2="243.8" y2="40.0" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round"/><circle cx="58.7" cy="111.9" r="2.4" fill="var(--orange)"/><circle cx="225.1" cy="58.0" r="2.4" fill="var(--orange)"/><text x="74.3" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="147.3" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="213.4" y="148.7" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="255.9" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text></svg></div>
+<div class="u3-cap">● 표시한 두 각은 직선 BD 가 <b>AB 와 DC</b> 를 자를 때 생긴 엇각이다(파란 두 변). AD 와 BC 에 대해서는 아무것도 말해 주지 않는다.</div>
+</div>
+<div class="box box-red"><div class="box-title">⚠ 방향 함정</div>
+<p style="margin-bottom:0">대각선이 만드는 엇각이 같다는 조건이 나오면, 그 엇각이 <strong>어느 두 변 사이의 엇각인지</strong>부터 확인합니다.</p>
+</div>
+<p>증명 문제에서는 다섯 가지 중 <strong>주어진 조건에 가장 잘 맞는 것 하나</strong>를 골라 씁니다. 정해진 하나의 길이 있는 것이 아닙니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">□ABCD 에서 AD ∥ BC 이고 AD = 8 cm, BC = 8 cm 이면 한 쌍의 대변이 평행하고 그 길이가 같으므로 평행사변형입니다(조건 5).</p>
+</div>
+    <div class="quiz" data-qid="b9" data-ans="2" data-type="num">
+      <div class="quiz-q">Q. □ABCD 에서 대각선 BD 에 대하여 ∠ADB = ∠CBD 이다. 다음 중 조건 하나를 더했을 때 □ABCD 가 반드시 평행사변형이 되는 것의 번호를 쓰시오.<br>① AB = DC ② AD = BC ③ ∠A = 90° ④ AB ⊥ BD ⑤ ∠ABD = ∠ADB</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 주어진 엇각이 어느 두 변 사이의 엇각인지 먼저 확인한다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b10" data-ans="31" data-type="num">
+      <div class="quiz-q">Q. □ABCD 에서 AD ∥ BC 이고 AD = 2x + 5, BC = 3x &minus; 26 이다. □ABCD 가 평행사변형이 되도록 하는 x 의 값을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 한 쌍의 대변이 평행할 때, 무엇이 더 있어야 평행사변형이 되는지 생각한다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s6">
+    <div class="section-head"><span class="section-num">6</span><span class="section-title">⑥ 평행사변형 안의 평행사변형</span>
+      <button class="complete-btn" onclick="toggleDone('s6')">완료하기</button></div>
+<p>평행사변형 안에 선을 그어 만든 사각형이 평행사변형인지 확인할 때도 <strong>되는 조건 다섯 가지 중 하나</strong>를 씁니다. 그림마다 가장 빠른 조건이 다릅니다.</p>
+<!-- ============ 대각선 BD 위의 두 점 E, F (BE = DF) ============ -->
+<div class="u3-wrap">
+<div class="u3-t">대각선 BD 위의 두 점 E, F (BE = DF)</div>
+<div class="diagram-wrap" style="max-width:292px;margin:10px auto"><svg class="dia" viewBox="15 4 292 154" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="94.1,40.0 93.0,107.5 227.0,126.5 228.0,59.0" fill="var(--green)" fill-opacity="0.16" stroke="none"/><polygon points="94.1,40.0 40.0,126.5 227.0,126.5 281.1,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="40.0" y1="126.5" x2="281.1" y2="40.0" stroke="var(--muted)" stroke-width="1.4" stroke-linecap="round"/><line x1="94.1" y1="40.0" x2="227.0" y2="126.5" stroke="var(--muted)" stroke-width="1.4" stroke-linecap="round"/><polygon points="94.1,40.0 93.0,107.5 227.0,126.5 228.0,59.0" stroke="var(--green)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="65.2" y1="113.2" x2="67.9" y2="120.8" stroke="var(--orange)" stroke-width="1.6"/><line x1="253.2" y1="45.8" x2="255.9" y2="53.3" stroke="var(--orange)" stroke-width="1.6"/><line x1="127.8" y1="57.2" x2="123.4" y2="63.9" stroke="var(--blue)" stroke-width="1.6"/><line x1="131.1" y1="59.4" x2="126.8" y2="66.1" stroke="var(--blue)" stroke-width="1.6"/><line x1="194.3" y1="100.4" x2="189.9" y2="107.1" stroke="var(--blue)" stroke-width="1.6"/><line x1="197.6" y1="102.6" x2="193.3" y2="109.3" stroke="var(--blue)" stroke-width="1.6"/><circle cx="160.5" cy="83.3" r="2.6" fill="var(--text)"/><text x="84.6" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="143.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="240.4" y="145.3" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="293.1" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="114.2" y="87.6" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">E</text><text x="214.5" y="87.8" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">F</text><text x="160.5" y="70.7" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">O</text></svg></div>
+<div class="u3-cap">초록 사각형 AECF 의 두 대각선은 AC 와 EF 이고, 둘 다 O 를 지난다.</div>
+</div>
+<p>대각선 위에 BE = DF 인 두 점을 잡으면 — O 에서 OB &minus; BE = OD &minus; DF 이므로 OE = OF, 그리고 OA = OC. <strong>두 대각선이 서로를 이등분</strong>하므로 □AECF 는 평행사변형(조건 4).</p>
+<!-- ============ ∠B, ∠D 의 이등분선이 AD, BC 와 만나는 점 E, F ============ -->
+<div class="u3-wrap">
+<div class="u3-t">∠B, ∠D 의 이등분선이 AD, BC 와 만나는 점 E, F</div>
+<div class="diagram-wrap" style="max-width:286px;margin:10px auto"><svg class="dia" viewBox="15 4 286 164" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="189.9,40.0 40.0,130.1 125.0,130.1 274.9,40.0" fill="var(--green)" fill-opacity="0.16" stroke="none"/><polygon points="87.9,40.0 40.0,130.1 227.0,130.1 274.9,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="40.0" y1="130.1" x2="189.9" y2="40.0" stroke="var(--green)" stroke-width="2.0" stroke-linecap="round"/><line x1="274.9" y1="40.0" x2="125.0" y2="130.1" stroke="var(--green)" stroke-width="2.0" stroke-linecap="round"/><circle cx="55.1" cy="114.1" r="2.4" fill="var(--orange)"/><circle cx="61.2" cy="124.2" r="2.4" fill="var(--orange)"/><line x1="256.5" y1="52.8" x2="262.9" y2="59.2" stroke="var(--blue)" stroke-width="1.6"/><line x1="256.5" y1="59.2" x2="262.9" y2="52.8" stroke="var(--blue)" stroke-width="1.6"/><line x1="250.5" y1="42.7" x2="256.9" y2="49.1" stroke="var(--blue)" stroke-width="1.6"/><line x1="250.5" y1="49.1" x2="256.9" y2="42.7" stroke="var(--blue)" stroke-width="1.6"/><text x="78.4" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="147.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="240.4" y="148.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="286.9" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="189.9" y="28.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">E</text><text x="125.0" y="154.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">F</text></svg></div>
+<div class="u3-cap">∠B = ∠D 이므로 ● 와 × 는 크기가 같다. 초록 사각형 EBFD 의 네 변을 살펴보자.</div>
+</div>
+<p>두 대각 ∠B, ∠D 의 이등분선을 그으면 □EBFD 는 <strong>조건 5</strong>(한 쌍의 대변이 평행하고 길이가 같다)로 평행사변형입니다. ED 와 BF 의 길이가 같다는 것은 앞에서 본 각의 이등분선이 만드는 이등변삼각형으로 보입니다. 엇각으로 BE ∥ FD 를 보여 조건 1 로 확인해도 됩니다.</p>
+<p>안쪽 사각형이 평행사변형인 것을 알면, 그 사각형의 <strong>대변의 길이가 같다</strong>는 것으로 둘레·길이를 구할 수 있습니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">평행사변형 ABCD 에서 AB = 5 cm, AD = 12 cm 이고 ∠B, ∠D 의 이등분선이 AD, BC 와 만나는 점을 각각 E, F 라 하자. AE = AB = 5 cm 이므로 ED = 12 &minus; 5 = 7 cm, 같은 방법으로 BF = 7 cm — □EBFD 에서 ED ∥ BF, ED = BF 입니다.</p>
+</div>
+    <div class="quiz" data-qid="b11" data-ans="30" data-type="num">
+      <div class="quiz-q">Q. 평행사변형 ABCD 에서 AB = 6 cm, AD = 15 cm, ∠B = 60° 이다. ∠A 의 이등분선이 BC 와 만나는 점을 F, ∠C 의 이등분선이 AD 와 만나는 점을 E 라 할 때, □AFCE 의 둘레의 길이는 몇 cm 인지 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: ∠B = 60° 이면 이등분선이 만드는 삼각형이 어떤 삼각형인지 본다. □AFCE 가 어떤 사각형인지 확인한다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b12" data-ans="23" data-type="num">
+      <div class="quiz-q">Q. 평행사변형 ABCD 에서 ∠B 의 이등분선이 AD 와 만나는 점을 E, ∠D 의 이등분선이 BC 와 만나는 점을 F 라 하자. AB = 15 cm, AD = 38 cm 일 때, ED 의 길이는 몇 cm 인지 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: ∠B 의 이등분선이 만드는 이등변삼각형에서 AE 를 먼저 구한다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s7">
+    <div class="section-head"><span class="section-num">7</span><span class="section-title">⑦ 평행사변형의 넓이(1) — 대각선이 나누는 넓이</span>
+      <button class="complete-btn" onclick="toggleDone('s7')">완료하기</button></div>
+<p>앞에서 쓴 평행사변형의 넓이 <strong>(밑변) × (높이)</strong> 의 이유: 대각선 하나가 평행사변형을 합동인 두 삼각형으로 나누고, 삼각형 하나가 ½ × (밑변) × (높이) 이므로 두 개를 합하면 ½ 이 사라집니다.</p>
+<p>수업에서 특히 강조한 것: 평행사변형에는 <strong>가로·세로가 없습니다.</strong> 「밑변」과 「높이」라고 정확히 말합니다. 높이는 밑변에 <strong>수직인</strong> 거리입니다(비스듬한 변의 길이가 아닙니다).</p>
+<!-- ============ 대각선이 평행사변형의 넓이를 나누는 방법 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">대각선이 평행사변형의 넓이를 나누는 방법</div>
+<div class="u3-2col"><div class="u3-card"><div class="u3-lab b">대각선 하나</div><div class="diagram-wrap" style="max-width:258px;margin:6px auto 0"><svg class="dia" viewBox="15 4 258 156" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="86.9,40.0 200.0,128.3 246.9,40.0" fill="var(--green)" fill-opacity="0.18" stroke="none"/><polygon points="86.9,40.0 40.0,128.3 200.0,128.3" fill="var(--blue)" fill-opacity="0.18" stroke="none"/><polygon points="86.9,40.0 40.0,128.3 200.0,128.3 246.9,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="86.9" y1="40.0" x2="200.0" y2="128.3" stroke="var(--muted)" stroke-width="1.4" stroke-linecap="round"/><text x="109.0" y="103.9" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">½</text><text x="178.0" y="74.5" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">½</text><text x="77.4" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="145.7" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="213.4" y="147.1" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="259.0" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text></svg></div></div><div class="u3-card"><div class="u3-lab g">대각선 둘</div><div class="diagram-wrap" style="max-width:258px;margin:6px auto 0"><svg class="dia" viewBox="15 4 258 156" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="143.5,84.1 246.9,40.0 86.9,40.0" fill="var(--green)" fill-opacity="0.18" stroke="none"/><polygon points="143.5,84.1 200.0,128.3 246.9,40.0" fill="var(--blue)" fill-opacity="0.18" stroke="none"/><polygon points="143.5,84.1 40.0,128.3 200.0,128.3" fill="var(--green)" fill-opacity="0.18" stroke="none"/><polygon points="143.5,84.1 86.9,40.0 40.0,128.3" fill="var(--blue)" fill-opacity="0.18" stroke="none"/><polygon points="86.9,40.0 40.0,128.3 200.0,128.3 246.9,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="86.9" y1="40.0" x2="200.0" y2="128.3" stroke="var(--muted)" stroke-width="1.4" stroke-linecap="round"/><line x1="40.0" y1="128.3" x2="246.9" y2="40.0" stroke="var(--muted)" stroke-width="1.4" stroke-linecap="round"/><text x="90.1" y="89.2" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">¼</text><text x="127.8" y="118.6" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">¼</text><text x="196.8" y="89.2" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">¼</text><text x="159.1" y="59.8" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">¼</text><text x="77.4" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="145.7" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="213.4" y="147.1" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="259.0" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text></svg></div></div></div>
+<div class="u3-cap">조각에 적은 수는 평행사변형 전체 넓이에 대한 비율이다.</div>
+</div>
+<p>대각선 두 개가 만든 네 삼각형은 넓이가 모두 같습니다. 일반적인 평행사변형에서 이웃한 두 조각은 합동이 아닌데도 그렇습니다. 이유 — 예를 들어 △OAB 와 △OBC 는 밑변 OA, OC 의 길이가 같고(대각선이 서로를 이등분) 높이(B 에서 AC 까지의 거리)가 같습니다.</p>
+<p>여기서 쓴 생각을 일반화하면: <strong>높이가 같은 두 삼각형의 넓이의 비는 밑변의 길이의 비와 같습니다.</strong> 한 대각선 위에서 밑변을 나누는 문제에 그대로 씁니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">□ABCD 의 넓이가 72 cm² 이면 △ABC = ½ × 72 = 36 cm², 두 대각선의 교점을 O 라 할 때 △OAB = ¼ × 72 = 18 cm².</p>
+</div>
+    <div class="quiz" data-qid="b13" data-ans="48" data-type="num">
+      <div class="quiz-q">Q. 평행사변형 ABCD 의 두 대각선의 교점을 O 라 하자. △OBC 의 넓이가 12 cm² 일 때, □ABCD 의 넓이는 몇 cm² 인지 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 두 대각선이 만든 네 삼각형의 넓이는 모두 같다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+<!-- ============ 두 대각선의 교점 O 를 지나는 직선 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">두 대각선의 교점 O 를 지나는 직선</div>
+<div class="diagram-wrap" style="max-width:289px;margin:10px auto"><svg class="dia" viewBox="15 4 289 162" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="227.0,128.3 159.0,84.2 138.9,128.3" fill="var(--orange)" fill-opacity="0.2" stroke="none"/><polygon points="91.0,40.0 159.0,84.2 179.1,40.0" fill="var(--orange)" fill-opacity="0.2" stroke="none"/><polygon points="91.0,40.0 40.0,128.3 227.0,128.3 278.0,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="91.0" y1="40.0" x2="227.0" y2="128.3" stroke="var(--muted)" stroke-width="1.4" stroke-linecap="round"/><line x1="179.1" y1="40.0" x2="138.9" y2="128.3" stroke="var(--purple)" stroke-width="2.0" stroke-linecap="round"/><line x1="127.2" y1="58.7" x2="122.8" y2="65.4" stroke="var(--blue)" stroke-width="1.6"/><line x1="195.2" y1="102.9" x2="190.8" y2="109.6" stroke="var(--blue)" stroke-width="1.6"/><polyline points="163.6,74.2 162.7,73.8 161.9,73.6 161.1,73.4 160.2,73.2 159.3,73.2 158.5,73.2 157.6,73.3 156.8,73.4 155.9,73.6 155.1,73.9 154.3,74.2 153.5,74.6 152.8,75.1 152.1,75.6 151.4,76.2 150.8,76.8 150.3,77.5 149.8,78.2" fill="none" stroke="var(--purple)" stroke-width="1.6"/><polyline points="154.4,94.2 155.3,94.5 156.1,94.8 156.9,95.0 157.8,95.1 158.7,95.2 159.5,95.2 160.4,95.1 161.2,94.9 162.1,94.7 162.9,94.5 163.7,94.1 164.5,93.7 165.2,93.2 165.9,92.7 166.6,92.2 167.2,91.5 167.7,90.9 168.2,90.2" fill="none" stroke="var(--purple)" stroke-width="1.6"/><circle cx="109.2" cy="45.4" r="2.4" fill="var(--orange)"/><circle cx="208.8" cy="122.9" r="2.4" fill="var(--orange)"/><circle cx="159.0" cy="84.2" r="2.6" fill="var(--text)"/><text x="81.5" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="145.8" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="240.4" y="147.2" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="290.0" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="189.0" y="89.6" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">O</text><text x="179.1" y="28.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">E</text><text x="138.9" y="152.7" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">F</text></svg></div>
+<div class="u3-cap">주황색 두 삼각형에서 AO = CO, 보라색은 맞꼭지각, ● 는 AD ∥ BC 에서 생긴 엇각이다.</div>
+</div>
+<p>두 대각선의 교점 O 를 지나는 직선은 평행사변형을 <strong>넓이가 같은 두 부분</strong>으로 나눕니다. 잘린 삼각형끼리 합동(ASA)이라, 한쪽에서 떼어 반대쪽에 붙이면 대각선이 나눈 조각과 같아지기 때문입니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">넓이가 52 cm² 인 평행사변형 ABCD 의 두 대각선의 교점 O 를 지나는 직선이 AD, BC 와 만나는 점을 E, F 라 하면, △AOE ≡ △COF 이므로 □ABFE 의 넓이는 □ABCD 의 절반인 26 cm².</p>
+</div>
+    <div class="quiz" data-qid="b14" data-ans="25" data-type="num">
+      <div class="quiz-q">Q. 넓이가 100 cm² 인 평행사변형 ABCD 의 두 대각선의 교점 O 를 지나는 직선이 AD, BC 와 만나는 점을 각각 E, F 라 하자. △AOE 와 △BOF 의 넓이의 합은 몇 cm² 인지 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 교점 O 를 사이에 둔 두 삼각형 중 합동인 쌍을 찾아 한쪽으로 옮겨 붙인다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s8">
+    <div class="section-head"><span class="section-num">8</span><span class="section-title">⑧ 평행사변형의 넓이(2) — 내부의 한 점</span>
+      <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
+<p>평행사변형 안의 아무 점 P 에서 네 꼭짓점으로 선분을 그으면 삼각형 네 개가 생깁니다. 이때 <strong>마주 보는 두 삼각형의 넓이의 합은 평행사변형 넓이의 절반</strong>입니다: △PAB + △PCD = △PBC + △PDA = ½ □ABCD.</p>
+<p>가장 짧은 이유: △PAB 와 △PCD 는 밑변 AB, CD 의 길이가 같고, 두 높이를 더하면 AB 와 DC 사이의 거리(평행사변형의 높이)가 됩니다. 그래서 합이 ½ × (밑변) × (높이) 입니다.</p>
+<!-- ============ 내부의 한 점 P 를 지나고 변에 평행한 두 직선 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">내부의 한 점 P 를 지나고 변에 평행한 두 직선</div>
+<div class="diagram-wrap" style="max-width:376px;margin:10px auto"><svg class="dia" viewBox="15 4 376 241" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="166.5,141.5 290.0,215.0 365.0,40.0" fill="var(--blue)" fill-opacity="0.15" stroke="none"/><polygon points="166.5,141.5 115.0,40.0 40.0,215.0" fill="var(--blue)" fill-opacity="0.15" stroke="none"/><polygon points="115.0,40.0 40.0,215.0 290.0,215.0 365.0,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="71.5" y1="141.5" x2="321.5" y2="141.5" stroke="var(--muted)" stroke-width="1.3" stroke-dasharray="5,4" stroke-linecap="round"/><line x1="135.0" y1="215.0" x2="210.0" y2="40.0" stroke="var(--muted)" stroke-width="1.3" stroke-dasharray="5,4" stroke-linecap="round"/><line x1="166.5" y1="141.5" x2="115.0" y2="40.0" stroke="var(--orange)" stroke-width="1.6" stroke-linecap="round"/><line x1="166.5" y1="141.5" x2="40.0" y2="215.0" stroke="var(--orange)" stroke-width="1.6" stroke-linecap="round"/><line x1="166.5" y1="141.5" x2="290.0" y2="215.0" stroke="var(--orange)" stroke-width="1.6" stroke-linecap="round"/><line x1="166.5" y1="141.5" x2="365.0" y2="40.0" stroke="var(--orange)" stroke-width="1.6" stroke-linecap="round"/><text x="117.7" y="112.7" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">a</text><text x="163.8" y="78.9" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">a</text><text x="92.7" y="171.0" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">b</text><text x="113.8" y="195.5" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">b</text><text x="197.2" y="195.5" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">c</text><text x="259.3" y="171.0" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">c</text><text x="247.2" y="78.9" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">d</text><text x="284.3" y="112.7" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="700">d</text><circle cx="166.5" cy="141.5" r="2.6" fill="var(--text)"/><text x="105.5" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="232.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="302.0" y="232.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="377.0" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="140.5" y="131.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">P</text></svg></div>
+<div class="u3-cap">점선은 P 를 지나고 각 변에 평행한 직선이다. 점선이 만든 작은 평행사변형 네 개를 P 에서 나간 선분이 각각 반으로 나눈다 — 같은 글자끼리 넓이가 같다.</div>
+</div>
+<p>작은 평행사변형 네 개로 나눠 보면 △PAB = a + b, △PBC = b + c, △PCD = c + d, △PDA = d + a — 마주 보는 둘을 더하면 <strong>양쪽 모두 a + b + c + d</strong> 입니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">넓이가 76 cm² 인 평행사변형 ABCD 의 내부의 한 점 P 에 대하여 △PAB = 26 cm² 이면 △PCD = 38 &minus; 26 = 12 cm².</p>
+</div>
+<!-- ============ 대각선 AC 위의 한 점 P ============ -->
+<div class="u3-wrap">
+<div class="u3-t">대각선 AC 위의 한 점 P</div>
+<div class="diagram-wrap" style="max-width:275px;margin:10px auto"><svg class="dia" viewBox="15 4 275 189" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="117.7,77.0 66.2,40.0 264.2,40.0" fill="var(--green)" fill-opacity="0.18" stroke="none"/><polygon points="117.7,77.0 66.2,40.0 40.0,163.2" fill="var(--green)" fill-opacity="0.18" stroke="none"/><polygon points="66.2,40.0 40.0,163.2 238.0,163.2 264.2,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="66.2" y1="40.0" x2="238.0" y2="163.2" stroke="var(--text)" stroke-width="1.8" stroke-linecap="round"/><line x1="117.7" y1="77.0" x2="40.0" y2="163.2" stroke="var(--green)" stroke-width="1.6" stroke-linecap="round"/><line x1="117.7" y1="77.0" x2="264.2" y2="40.0" stroke="var(--green)" stroke-width="1.6" stroke-linecap="round"/><line x1="40.0" y1="163.2" x2="107.3" y2="69.5" stroke="var(--purple)" stroke-width="1.4" stroke-dasharray="4,3" stroke-linecap="round"/><line x1="264.2" y1="40.0" x2="196.9" y2="133.8" stroke="var(--purple)" stroke-width="1.4" stroke-dasharray="4,3" stroke-linecap="round"/><polyline points="102.0,76.8 109.3,82.0 114.6,74.7" fill="none" stroke="var(--purple)" stroke-width="1.4"/><polyline points="202.2,126.5 194.9,121.2 189.6,128.5" fill="none" stroke="var(--purple)" stroke-width="1.4"/><line x1="70.4" y1="114.0" x2="76.9" y2="118.7" stroke="var(--purple)" stroke-width="1.6"/><line x1="233.8" y1="89.2" x2="227.3" y2="84.6" stroke="var(--purple)" stroke-width="1.6"/><circle cx="117.7" cy="77.0" r="2.6" fill="var(--text)"/><text x="56.7" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="180.7" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="250.0" y="180.7" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="276.2" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="117.7" y="61.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">P</text></svg></div>
+<div class="u3-cap">초록 두 삼각형은 밑변 AP 를 함께 가진다. 보라색 점선은 B, D 에서 대각선 AC 에 내린 수선이다.</div>
+</div>
+<p>P 가 <strong>대각선 위에</strong> 있으면 더 강한 사실이 있습니다 — P 가 대각선 AC 위에 있으면 △PAB = △PAD, △PCB = △PCD. (B, D 에서 AC 까지의 거리가 같기 때문입니다.)</p>
+<p>넓이의 합·비·차가 주어진 문제는 「마주 보는 둘의 합 = 절반」 식을 먼저 세웁니다.</p>
+    <div class="quiz" data-qid="b15" data-ans="19" data-type="num">
+      <div class="quiz-q">Q. 넓이가 90 cm² 인 평행사변형 ABCD 의 내부의 한 점 P 에 대하여 △PDA 의 넓이가 26 cm² 일 때, △PBC 의 넓이는 몇 cm² 인지 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 마주 보는 두 삼각형의 넓이의 합은 평행사변형 넓이의 절반이다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b16" data-ans="22" data-type="num">
+      <div class="quiz-q">Q. 평행사변형 ABCD 의 내부의 한 점 P 에 대하여 △PAB = 27 cm², △PCD = 35 cm², △PBC = 40 cm² 일 때, △PDA 의 넓이는 몇 cm² 인지 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 마주 보는 두 삼각형의 넓이의 합은 평행사변형 넓이의 절반이다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+<p>평행사변형은 앞으로 배울 직사각형·마름모·정사각형의 바탕입니다. 다음 단원에서는 평행사변형에 조건을 하나씩 더해 새 사각형을 만듭니다 — 이 단원의 성질은 그 사각형들에서도 전부 그대로 성립합니다.</p>
+  </section>
+
+<section class="wrongnote" id="wrong">
+    <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
+    <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
+    <button class="review-btn" id="reviewBtn" onclick="reviewWrong()">오답 정리 완료</button>
+    <button class="clear-btn" onclick="clearWrong()">오답노트 비우기</button>
+  </section>
+  <section class="gate" id="gate">
+    <h2>🔓 연습문제 잠금 해제</h2>
+    <p class="desc">아래 두 조건을 모두 채우면 기본&middot;응용&middot;심화 연습문제가 열려요.</p>
+    <ul class="checklist">
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">16</span>)</span></li>
+      <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
+    </ul>
+    <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
+  </section>
+
+  <div class="practice-wrap" id="practiceWrap">
+    <div class="practice-title">✏️ 연습문제</div>
+    <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용 10문제를 모두 채점하면 심화가 열립니다. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
+
+    <div class="pset" id="pset_basic">
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">기본 &mdash; 배운 개념을 그대로 적용하면 풀린다</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pbody">
+        <div class="prob" data-qid="pb1" data-ans="110" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>평행사변형 ABCD 에서 ∠A &minus; ∠B = 40° 일 때, ∠C 의 크기를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 이웃한 두 각의 합은 180° 이고, 마주 보는 각은 크기가 같다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb2" data-ans="10" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>평행사변형 ABCD 에서 AB = 2x + 1, CD = x + 6, AD = 3y &minus; 2, BC = 2y + 3 일 때, x + y 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 마주 보는 두 변의 길이가 같다는 식을 두 개 세운다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb3" data-ans="26" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>평행사변형 ABCD 의 두 대각선의 교점을 O 라 하자. AB = 9 cm, AC = 14 cm, BD = 20 cm 일 때, △OCD 의 둘레의 길이는 몇 cm 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 대각선은 교점 O 에서 반으로 나뉜다. 삼각형의 세 변 중 두 변이 대각선의 절반이다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb4" data-ans="11" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>좌표평면 위의 세 점 A(&minus;1, 3), B(&minus;3, &minus;2), C(6, &minus;2) 에 대하여 □ABCD 가 평행사변형이 되도록 하는 점 D 의 좌표를 (a, b) 라 할 때, a + b 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: B 에서 A 로 가려면 x좌표·y좌표가 각각 얼마나 변하는지 보고, C 에서 똑같이 옮긴다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb5" data-ans="5" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>평행사변형 ABCD 에서 ∠A 의 이등분선이 BC 와 만나는 점을 E 라 하자. AB = 9 cm, BC = 14 cm 일 때, EC 의 길이는 몇 cm 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 이등분선이 만든 엇각을 표시해 이등변삼각형을 찾는다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb6" data-ans="90" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>평행사변형 ABCD 에서 AD = 2AB 이고 점 M 은 BC 의 중점이다. ∠AMD 의 크기를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: AB, BM, MC, CD 사이의 길이 관계를 먼저 본다. 이웃한 두 각의 합이 180° 인 것을 쓴다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb7" data-ans="3" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>다음 중 □ABCD 가 평행사변형이 되지 <strong>않는</strong> 것의 번호를 쓰시오. (단, 점 O 는 두 대각선의 교점이다.)<br>① ∠A = ∠C, ∠B = ∠D ② AB ∥ DC, AB = DC ③ AB ∥ DC, AD = BC ④ OA = OC, OB = OD ⑤ AB = DC, AD = BC</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 각 보기가 되는 조건 다섯 가지 중 어느 것과 같은지 하나씩 맞춰 본다. 평행한 변과 길이가 같은 변이 같은 쌍인지 확인한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb8" data-ans="16" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>평행사변형 ABCD 에서 점 E 는 AD 의 중점이고, BE 의 연장선과 CD 의 연장선이 만나는 점을 F 라 하자. AB = 8 cm, BC = 13 cm 일 때, CF 의 길이는 몇 cm 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 중점을 꼭짓점으로 하는 두 삼각형이 합동이다(ASA).</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb9" data-ans="12" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>평행사변형 ABCD 의 두 대각선의 교점을 O 라 하자. △ABD 의 넓이가 24 cm² 일 때, △OBC 의 넓이는 몇 cm² 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: △ABD 와 △OBC 가 각각 평행사변형 넓이의 얼마인지 본다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb10" data-ans="15" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>넓이가 70 cm² 인 평행사변형 ABCD 의 내부의 한 점 P 에 대하여 △PAB = 20 cm², △PBC = 18 cm² 일 때, △PCD 의 넓이는 몇 cm² 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 마주 보는 두 삼각형의 넓이의 합은 평행사변형 넓이의 절반이다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pset locked" id="pset_applied">
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">응용 &mdash; 조건을 한 번 더 해석해야 식이 나온다</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
+      <div class="pbody">
+        <div class="prob" data-qid="pa1" data-ans="58" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>아래 그림과 같이 평행사변형 ABCD 에서 ∠D 의 이등분선이 BC 와 만나는 점을 E, 꼭짓점 A 에서 DE 에 내린 수선의 발을 F 라 하자. AB = 6 cm, AD = 10 cm, ∠B = 64° 일 때, ∠BAF 의 크기를 구하시오.</div>
+<!-- ============ ∠D 의 이등분선과 A 에서 내린 수선 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">∠D 의 이등분선과 A 에서 내린 수선</div>
+<div class="diagram-wrap" style="max-width:316px;margin:10px auto"><svg class="dia" viewBox="15 4 316 186" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="95.2,40.0 40.0,153.2 250.0,153.2 305.2,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="305.2" y1="40.0" x2="124.0" y2="153.2" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round"/><line x1="95.2" y1="40.0" x2="154.2" y2="134.4" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round"/><polyline points="149.4,126.7 157.1,122.0 161.8,129.6" fill="none" stroke="var(--blue)" stroke-width="1.4"/><circle cx="282.2" cy="46.6" r="2.4" fill="var(--orange)"/><circle cx="289.2" cy="57.8" r="2.4" fill="var(--orange)"/><polyline points="53.0,153.2 53.0,152.4 52.9,151.6 52.8,150.8 52.6,150.1 52.4,149.3 52.1,148.5 51.8,147.8 51.4,147.1 51.0,146.4 50.6,145.7 50.1,145.0 49.6,144.4 49.0,143.9 48.4,143.3 47.8,142.8 47.1,142.4 46.4,141.9 45.7,141.6" fill="none" stroke="var(--text)" stroke-width="1.6"/><text x="71.8" y="138.1" font-size="13" fill="var(--text)" text-anchor="middle" font-weight="700">64°</text><polyline points="90.0,50.8 90.6,51.1 91.2,51.3 91.9,51.5 92.5,51.7 93.2,51.8 93.8,51.9 94.5,52.0 95.2,52.0 95.9,52.0 96.5,51.9 97.2,51.8 97.9,51.7 98.5,51.5 99.2,51.3 99.8,51.1 100.4,50.8 101.0,50.5 101.6,50.2" fill="none" stroke="var(--red)" stroke-width="1.6"/><text x="96.6" y="70.1" font-size="13" fill="var(--red)" text-anchor="middle" font-weight="700">?</text><text x="85.7" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="170.7" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="263.4" y="172.1" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="317.3" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="124.0" y="177.6" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">E</text><text x="184.1" y="142.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">F</text><text x="48.7" y="92.1" font-size="13" fill="var(--blue)" text-anchor="middle" font-weight="700">6 cm</text><text x="200.2" y="31.7" font-size="13" fill="var(--blue)" text-anchor="middle" font-weight="700">10 cm</text></svg></div>
+<div class="u3-cap">∠BAF 의 크기를 구한다.</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: ∠D 와 ∠ADE 를 먼저 구하고, △AFD 의 내각을 본다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa2" data-ans="18" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>아래 그림과 같이 평행사변형 ABCD 에서 ∠C 의 이등분선이 AB 와 만나는 점을 F, DA 의 연장선과 만나는 점을 E 라 하자. BC = 10 cm, CD = 16 cm, ∠B = 60° 일 때, △AEF 의 둘레의 길이는 몇 cm 인지 구하시오.</div>
+<!-- ============ ∠C 의 이등분선과 DA 의 연장선 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">∠C 의 이등분선과 DA 의 연장선</div>
+<div class="diagram-wrap" style="max-width:249px;margin:10px auto"><svg class="dia" viewBox="15 4 249 221" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="128.0,40.0 62.0,40.0 95.0,97.2" fill="var(--red)" fill-opacity="0.16" stroke="none"/><polygon points="128.0,40.0 40.0,192.4 150.0,192.4 238.0,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="150.0" y1="192.4" x2="62.0" y2="40.0" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round"/><line x1="128.0" y1="40.0" x2="62.0" y2="40.0" stroke="var(--text)" stroke-width="2.0" stroke-dasharray="5,4" stroke-linecap="round"/><circle cx="130.9" cy="181.4" r="2.4" fill="var(--orange)"/><circle cx="150.0" cy="170.4" r="2.4" fill="var(--orange)"/><polyline points="53.0,192.4 53.0,191.7 52.9,190.9 52.8,190.2 52.6,189.4 52.5,188.7 52.2,188.0 51.9,187.3 51.6,186.6 51.3,185.9 50.9,185.3 50.4,184.7 50.0,184.1 49.5,183.5 48.9,183.0 48.4,182.5 47.8,182.0 47.1,181.6 46.5,181.2" fill="none" stroke="var(--text)" stroke-width="1.6"/><text x="75.1" y="176.9" font-size="13" fill="var(--text)" text-anchor="middle" font-weight="700">60°</text><text x="28.0" y="209.8" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="163.4" y="211.3" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="250.0" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="142.1" y="28.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="52.5" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">E</text><text x="73.0" y="102.6" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">F</text><text x="95.0" y="212.1" font-size="13" fill="var(--blue)" text-anchor="middle" font-weight="700">10 cm</text><text x="216.5" y="133.9" font-size="13" fill="var(--blue)" text-anchor="middle" font-weight="700">16 cm</text></svg></div>
+<div class="u3-cap">빨간 삼각형 AEF 의 둘레를 구한다.</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: ∠C 의 이등분선이 만드는 삼각형 FBC 가 어떤 삼각형인지 먼저 본다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa3" data-ans="30" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>평행사변형 ABCD 에서 점 E 는 CD 의 중점이고, AE 의 연장선과 BC 의 연장선이 만나는 점을 F 라 하자. □ABCD 의 넓이가 60 cm² 일 때, △ACF 의 넓이는 몇 cm² 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 합동인 두 삼각형을 찾아 옮겨 붙이면 △ACF 가 어떤 삼각형과 넓이가 같아지는지 본다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa4" data-ans="36" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>아래 그림과 같이 평행사변형 ABCD 에서 BC = CE, DC = CF 가 되도록 BC, DC 의 연장선 위에 각각 점 E, F 를 잡았다. △ACD 의 넓이가 9 cm² 일 때, □BFED 의 넓이는 몇 cm² 인지 구하시오.</div>
+<!-- ============ BC, DC 의 연장선 위의 두 점 E, F ============ -->
+<div class="u3-wrap">
+<div class="u3-t">BC, DC 의 연장선 위의 두 점 E, F</div>
+<div class="diagram-wrap" style="max-width:304px;margin:10px auto"><svg class="dia" viewBox="15 4 304 199" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="40.0,103.0 124.0,166.0 292.0,103.0 208.0,40.0" fill="var(--green)" fill-opacity="0.14" stroke="none"/><polygon points="82.0,40.0 40.0,103.0 166.0,103.0 208.0,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="82.0" y1="40.0" x2="166.0" y2="103.0" stroke="var(--muted)" stroke-width="1.4" stroke-linecap="round"/><line x1="166.0" y1="103.0" x2="292.0" y2="103.0" stroke="var(--text)" stroke-width="2.0" stroke-linecap="round"/><line x1="166.0" y1="103.0" x2="124.0" y2="166.0" stroke="var(--text)" stroke-width="2.0" stroke-linecap="round"/><polygon points="40.0,103.0 124.0,166.0 292.0,103.0 208.0,40.0" stroke="var(--green)" stroke-width="1.8" fill="none" stroke-linejoin="round"/><line x1="103.0" y1="99.0" x2="103.0" y2="107.0" stroke="var(--orange)" stroke-width="1.6"/><line x1="229.0" y1="99.0" x2="229.0" y2="107.0" stroke="var(--orange)" stroke-width="1.6"/><line x1="191.4" y1="72.1" x2="184.8" y2="67.6" stroke="var(--blue)" stroke-width="1.6"/><line x1="189.2" y1="75.4" x2="182.6" y2="70.9" stroke="var(--blue)" stroke-width="1.6"/><line x1="149.4" y1="135.1" x2="142.8" y2="130.6" stroke="var(--blue)" stroke-width="1.6"/><line x1="147.2" y1="138.4" x2="140.6" y2="133.9" stroke="var(--blue)" stroke-width="1.6"/><text x="72.5" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="120.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="221.4" y="32.0" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="177.0" y="127.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="305.0" y="108.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">E</text><text x="124.0" y="190.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">F</text></svg></div>
+<div class="u3-cap">BC = CE, DC = CF 이다. 초록 사각형 BFED 의 넓이를 구한다.</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: □BFED 의 두 대각선이 서로를 이등분하는지 본다. 그다음 △BCD 와 □BFED 의 넓이를 비교한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa5" data-ans="21" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>아래 그림과 같이 평행사변형 ABCD 의 두 대각선의 교점 O 를 지나는 직선이 AB, CD 와 만나는 점을 각각 E, F 라 하자. AB = 9 cm, BC = 12 cm 이고, 꼭짓점 D 에서 BC 의 연장선에 내린 수선의 길이 DG 가 7 cm 일 때, △OBE 와 △OCF 의 넓이의 합은 몇 cm² 인지 구하시오.</div>
+<!-- ============ 대각선의 교점 O 를 지나는 직선 EF ============ -->
+<div class="u3-wrap">
+<div class="u3-t">대각선의 교점 O 를 지나는 직선 EF</div>
+<div class="diagram-wrap" style="max-width:367px;margin:10px auto"><svg class="dia" viewBox="15 4 367 191" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="190.1,99.5 244.0,159.0 269.6,127.3" fill="var(--blue)" fill-opacity="0.2" stroke="none"/><polygon points="190.1,99.5 40.0,159.0 110.6,71.7" fill="var(--blue)" fill-opacity="0.2" stroke="none"/><polygon points="136.2,40.0 40.0,159.0 244.0,159.0 340.2,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="136.2" y1="40.0" x2="244.0" y2="159.0" stroke="var(--muted)" stroke-width="1.3" stroke-linecap="round"/><line x1="40.0" y1="159.0" x2="340.2" y2="40.0" stroke="var(--muted)" stroke-width="1.3" stroke-linecap="round"/><line x1="110.6" y1="71.7" x2="269.6" y2="127.3" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round"/><line x1="244.0" y1="159.0" x2="340.2" y2="159.0" stroke="var(--text)" stroke-width="1.4" stroke-dasharray="4,3" stroke-linecap="round"/><line x1="340.2" y1="40.0" x2="340.2" y2="159.0" stroke="var(--text)" stroke-width="1.4" stroke-dasharray="4,3" stroke-linecap="round"/><polyline points="340.2,150.0 331.2,150.0 331.2,159.0" fill="none" stroke="var(--text)" stroke-width="1.4"/><circle cx="190.1" cy="99.5" r="2.6" fill="var(--text)"/><text x="126.7" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="176.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="256.6" y="182.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="352.2" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="193.9" y="83.2" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">O</text><text x="88.6" y="77.1" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">E</text><text x="291.3" y="136.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">F</text><text x="352.2" y="176.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">G</text><text x="142.0" y="150.7" font-size="13" fill="var(--blue)" text-anchor="middle" font-weight="700">12 cm</text><text x="359.2" y="104.2" font-size="13" fill="var(--blue)" text-anchor="middle" font-weight="700">7 cm</text><text x="66.3" y="86.6" font-size="13" fill="var(--blue)" text-anchor="middle" font-weight="700">9 cm</text></svg></div>
+<div class="u3-cap">파란 두 삼각형의 넓이의 합을 구한다. DG 는 D 에서 BC 의 연장선에 내린 수선이다.</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 합동인 삼각형을 옮겨 붙이면 두 대각선이 만든 네 삼각형 중 하나가 된다. 평행사변형의 넓이는 밑변 × 높이.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa6" data-ans="8" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>아래 그림과 같이 평행사변형 ABCD 에서 네 점 E, F, G, H 는 각각 AB, BC, CD, DA 의 중점이다. AF, HF, DF 가 EG 와 만나는 점을 각각 P, R, Q 라 하자. □ABCD 의 넓이가 64 cm² 일 때, △PFQ 의 넓이는 몇 cm² 인지 구하시오.</div>
+<!-- ============ 네 변의 중점 E, F, G, H ============ -->
+<div class="u3-wrap">
+<div class="u3-t">네 변의 중점 E, F, G, H</div>
+<div class="diagram-wrap" style="max-width:271px;margin:10px auto"><svg class="dia" viewBox="15 4 271 234" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="110.0,120.0 120.0,200.0 190.0,120.0" fill="var(--purple)" fill-opacity="0.25" stroke="none"/><polygon points="100.0,40.0 40.0,200.0 200.0,200.0 260.0,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="70.0" y1="120.0" x2="230.0" y2="120.0" stroke="var(--text)" stroke-width="1.6" stroke-linecap="round"/><line x1="100.0" y1="40.0" x2="120.0" y2="200.0" stroke="var(--text)" stroke-width="1.6" stroke-linecap="round"/><line x1="260.0" y1="40.0" x2="120.0" y2="200.0" stroke="var(--text)" stroke-width="1.6" stroke-linecap="round"/><line x1="180.0" y1="40.0" x2="120.0" y2="200.0" stroke="var(--text)" stroke-width="1.6" stroke-linecap="round"/><text x="90.5" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="217.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="212.0" y="217.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="272.0" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="53.0" y="125.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">E</text><text x="247.0" y="125.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">G</text><text x="120.0" y="224.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">F</text><text x="180.0" y="28.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">H</text><text x="91.6" y="110.0" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">P</text><text x="184.3" y="104.1" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">Q</text><text x="139.0" y="106.3" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">R</text></svg></div>
+<div class="u3-cap">보라색 삼각형 PFQ 의 넓이를 구한다.</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: □ABFH 가 평행사변형임을 이용해 P 가 어떤 점인지 찾는다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa7" data-ans="40" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>넓이가 112 cm² 인 평행사변형 ABCD 의 내부의 한 점 P 에 대하여 △PAB : △PCD = 2 : 5 일 때, △PCD 의 넓이는 몇 cm² 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 마주 보는 두 삼각형의 넓이의 합은 평행사변형 넓이의 절반이다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa8" data-ans="34" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>평행사변형 ABCD 의 대각선 AC 위의 한 점 P 에 대하여 △PAB = 12 cm², △PCD = 5 cm² 일 때, □ABCD 의 넓이는 몇 cm² 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 대각선 AC 위의 점 P 에 대하여 △PAB 와 넓이가 같은 삼각형을 찾는다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa9" data-ans="3" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>좌표평면 위의 세 점 A(&minus;5, &minus;1), B(1, &minus;2), C(4, 4) 에 대하여 □ABCD 가 평행사변형이 되도록 하는 점 D 의 좌표를 (a, b) 라 할 때, a + b 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: B 에서 A 로 가려면 x좌표·y좌표가 각각 얼마나 변하는지 보고, C 에서 똑같이 옮긴다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa10" data-ans="25" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>아래 그림과 같이 평행사변형 ABCD 의 두 대각선의 교점을 O 라 하고, □OCDE 가 평행사변형이 되도록 점 E 를 잡았다. OE 와 AD 의 교점을 F 라 하자. AB = 12 cm, BC = 16 cm, AC = 22 cm 일 때, △AOF 의 둘레의 길이는 몇 cm 인지 구하시오.</div>
+<!-- ============ 평행사변형 OCDE 를 붙인 그림 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">평행사변형 OCDE 를 붙인 그림</div>
+<div class="diagram-wrap" style="max-width:302px;margin:10px auto"><svg class="dia" viewBox="6 4 302 295" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="40.0,116.1 161.1,192.2 144.0,116.1" fill="var(--orange)" fill-opacity="0.2" stroke="none"/><polygon points="40.0,116.1 74.1,268.3 282.1,268.3 248.0,116.1" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="40.0" y1="116.1" x2="282.1" y2="268.3" stroke="var(--text)" stroke-width="1.6" stroke-linecap="round"/><line x1="74.1" y1="268.3" x2="248.0" y2="116.1" stroke="var(--text)" stroke-width="1.6" stroke-linecap="round"/><line x1="161.1" y1="192.2" x2="126.9" y2="40.0" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"/><line x1="126.9" y1="40.0" x2="248.0" y2="116.1" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"/><text x="30.5" y="105.1" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="62.1" y="285.8" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="294.1" y="285.8" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="260.0" y="109.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="161.1" y="221.6" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">O</text><text x="126.9" y="28.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">E</text><text x="155.0" y="102.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">F</text><text x="32.7" y="202.4" font-size="13" fill="var(--blue)" text-anchor="middle" font-weight="700">12 cm</text><text x="178.1" y="260.0" font-size="13" fill="var(--blue)" text-anchor="middle" font-weight="700">16 cm</text></svg></div>
+<div class="u3-cap">AC = 22 cm 이다. 주황색 삼각형 AOF 의 둘레를 구한다.</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: □OCDE 가 평행사변형이므로 ED ∥ AC, ED = OC 이다. □AODE 는 어떤 사각형인지 본다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pset locked" id="pset_hard">
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">심화 &mdash; 조각의 넓이를 나누고 합쳐서 구한다</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
+      <div class="pbody">
+        <div class="solution">
+          <div class="sol-head">🧩 단계별 풀이 &mdash; 넓이를 조각으로 나누어 구하기</div>
+          <div class="sol-q">평행사변형 ABCD 에서 두 점 M, N 은 각각 AD, BC 의 중점이고, CD 의 연장선이 AN 의 연장선, BM 의 연장선과 만나는 점을 각각 E, F, AE 와 BF 의 교점을 P 라 하자(아래 그림). □ABNM 의 넓이가 20 cm² 일 때, △PEF 의 넓이를 구해 보자.</div>
+<!-- ============ 두 중점 M, N 과 CD 의 연장선 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">두 중점 M, N 과 CD 의 연장선</div>
+<div class="diagram-wrap" style="max-width:291px;margin:10px auto"><svg class="dia" viewBox="15 9 291 350" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="100.0,184.0 145.0,328.0 280.0,40.0" fill="var(--green)" fill-opacity="0.18" stroke="none"/><polygon points="85.0,136.0 40.0,232.0 190.0,232.0 235.0,136.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="85.0" y1="136.0" x2="145.0" y2="328.0" stroke="var(--text)" stroke-width="1.6" stroke-linecap="round"/><line x1="40.0" y1="232.0" x2="280.0" y2="40.0" stroke="var(--text)" stroke-width="1.6" stroke-linecap="round"/><line x1="160.0" y1="136.0" x2="115.0" y2="232.0" stroke="var(--muted)" stroke-width="1.3" stroke-linecap="round"/><line x1="280.0" y1="40.0" x2="145.0" y2="328.0" stroke="var(--text)" stroke-width="1.6" stroke-linecap="round"/><line x1="122.5" y1="132.0" x2="122.5" y2="140.0" stroke="var(--orange)" stroke-width="1.6"/><line x1="197.5" y1="132.0" x2="197.5" y2="140.0" stroke="var(--orange)" stroke-width="1.6"/><line x1="75.5" y1="228.0" x2="75.5" y2="236.0" stroke="var(--orange)" stroke-width="1.6"/><line x1="79.5" y1="228.0" x2="79.5" y2="236.0" stroke="var(--orange)" stroke-width="1.6"/><line x1="150.5" y1="228.0" x2="150.5" y2="236.0" stroke="var(--orange)" stroke-width="1.6"/><line x1="154.5" y1="228.0" x2="154.5" y2="236.0" stroke="var(--orange)" stroke-width="1.6"/><text x="75.5" y="124.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="249.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="202.0" y="249.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="254.0" y="141.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="160.0" y="119.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">M</text><text x="104.0" y="256.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">N</text><text x="157.0" y="345.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">E</text><text x="292.0" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">F</text><text x="83.1" y="183.2" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">P</text></svg></div>
+<div class="u3-cap">초록 삼각형 PEF 의 넓이를 구한다.</div>
+</div>
+          <div class="step"><span class="s-label">1단계</span><br>□ABNM 은 평행사변형이고(AM ∥ BN, AM = BN) P 는 두 대각선의 교점 → △PNM = ¼ × 20 = <strong>5 cm²</strong></div>
+          <div class="step"><span class="s-label">2단계</span><br>M 이 AD 의 중점이므로 △ABM ≡ △DFM (ASA) → △DFM = △ABM = ½ × 20 = <strong>10 cm²</strong>, 같은 방법으로 △ECN ≡ △ABN → △ECN = <strong>10 cm²</strong></div>
+          <div class="step"><span class="s-label">3단계</span><br>□MNCD 는 □ABNM 과 합동인 평행사변형 → <strong>20 cm²</strong></div>
+          <div class="step"><span class="s-label">4단계</span><br>△PEF = △PNM + □MNCD + △DFM + △ECN = 5 + 20 + 10 + 10 = <strong>45 cm²</strong></div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 &rarr;</button>
+        </div>
+        <div class="prob" data-qid="ph1" data-ans="72" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>위 그림과 같은 모양으로, 평행사변형 ABCD 에서 두 점 M, N 은 각각 AD, BC 의 중점이다. CD 의 연장선이 AN 의 연장선, BM 의 연장선과 만나는 점을 각각 E, F 라 하고, AE 와 BF 의 교점을 P 라 하자. □ABCD 의 넓이가 64 cm² 일 때, △PEF 의 넓이는 몇 cm² 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 위 그림에서 △PEF 를 넓이를 아는 조각 네 개로 나눠 본다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph2" data-ans="90" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>아래 그림과 같이 평행사변형 ABCD 의 내부의 한 점 P 에 대하여 AP 의 연장선과 BC 의 교점을 Q 라 하자. △DPQ 의 넓이가 △DAP 의 넓이의 2 배이고 △PBC 의 넓이가 30 cm² 일 때, □ABCD 의 넓이는 몇 cm² 인지 구하시오.</div>
+<!-- ============ AP 의 연장선이 BC 와 만나는 점 Q ============ -->
+<div class="u3-wrap">
+<div class="u3-t">AP 의 연장선이 BC 와 만나는 점 Q</div>
+<div class="diagram-wrap" style="max-width:272px;margin:10px auto"><svg class="dia" viewBox="15 4 272 226" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="91.0,40.0 40.0,193.0 210.0,193.0 261.0,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="91.0" y1="40.0" x2="142.0" y2="193.0" stroke="var(--text)" stroke-width="1.6" stroke-linecap="round"/><line x1="261.0" y1="40.0" x2="108.0" y2="91.0" stroke="var(--orange)" stroke-width="1.6" stroke-linecap="round"/><line x1="261.0" y1="40.0" x2="142.0" y2="193.0" stroke="var(--orange)" stroke-width="1.6" stroke-linecap="round"/><line x1="108.0" y1="91.0" x2="40.0" y2="193.0" stroke="var(--blue)" stroke-width="1.6" stroke-linecap="round"/><line x1="108.0" y1="91.0" x2="210.0" y2="193.0" stroke="var(--blue)" stroke-width="1.6" stroke-linecap="round"/><text x="81.5" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="210.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="222.0" y="210.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="273.0" y="33.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="142.0" y="217.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">Q</text><text x="91.1" y="90.2" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">P</text></svg></div>
+<div class="u3-cap">평행사변형 ABCD 의 넓이를 구한다.</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: △DAQ 의 넓이가 평행사변형 넓이의 얼마인지 먼저 본다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph3" data-ans="104" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>아래 그림과 같이 직선 l 과 한 점 B 에서 만나는 평행사변형 ABCD 가 있다. 두 점 A, C 에서 직선 l 에 내린 수선의 발을 각각 A′, C′ 이라 하면 AA′ = 8 cm, A′B = 6 cm, BC′ = 10 cm, CC′ = 4 cm 이다. □ABCD 의 넓이는 몇 cm² 인지 구하시오.</div>
+<!-- ============ 직선 l 과 한 점 B 에서 만나는 평행사변형 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">직선 l 과 한 점 B 에서 만나는 평행사변형</div>
+<div class="diagram-wrap" style="max-width:324px;margin:10px auto"><svg class="dia" viewBox="27 4 324 241" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><polygon points="68.0,96.0 152.0,208.0 292.0,152.0 208.0,40.0" fill="var(--blue)" fill-opacity="0.14" stroke="none"/><line x1="40.0" y1="208.0" x2="327.0" y2="208.0" stroke="var(--text)" stroke-width="1.6" stroke-linecap="round"/><polygon points="68.0,96.0 152.0,208.0 292.0,152.0 208.0,40.0" stroke="var(--text)" stroke-width="2.0" fill="none" stroke-linejoin="round"/><line x1="68.0" y1="96.0" x2="68.0" y2="208.0" stroke="var(--text)" stroke-width="1.4" stroke-linecap="round"/><line x1="292.0" y1="152.0" x2="292.0" y2="208.0" stroke="var(--text)" stroke-width="1.4" stroke-linecap="round"/><polyline points="68.0,199.0 77.0,199.0 77.0,208.0" fill="none" stroke="var(--text)" stroke-width="1.4"/><polyline points="292.0,199.0 283.0,199.0 283.0,208.0" fill="none" stroke="var(--text)" stroke-width="1.4"/><text x="55.0" y="93.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="152.0" y="232.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="305.0" y="157.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="217.5" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="57.0" y="232.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A′</text><text x="303.0" y="232.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C′</text><text x="337.0" y="213.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="400">l</text><text x="49.0" y="156.7" font-size="13" fill="var(--blue)" text-anchor="middle" font-weight="700">8 cm</text><text x="273.0" y="184.7" font-size="13" fill="var(--blue)" text-anchor="middle" font-weight="700">4 cm</text><text x="110.0" y="227.7" font-size="13" fill="var(--blue)" text-anchor="middle" font-weight="700">6 cm</text><text x="222.0" y="227.7" font-size="13" fill="var(--blue)" text-anchor="middle" font-weight="700">10 cm</text></svg></div>
+<div class="u3-cap">A, C 에서 직선 l 에 내린 수선의 발이 A′, C′ 이다.</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: □ABCD 의 넓이는 △ABC 의 두 배다. △ABC 를 직선 l 과 두 수선이 만드는 도형 안에서 생각한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph4" data-ans="7" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>평행사변형 ABCD 에서 ∠A, ∠D 의 이등분선이 BC 와 만나는 점을 각각 E, F 라 하자. AB = 15 cm, AD = 23 cm 일 때, EF 의 길이는 몇 cm 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 두 이등분선이 각각 이등변삼각형을 만든다. BE 와 CF 가 서로 겹치는지 본다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph5" data-ans="12" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>둘레의 길이가 56 cm 인 평행사변형 ABCD 에서 ∠B 의 이등분선이 AD 와 만나는 점을 E 라 하자. ED = 4 cm 일 때, AB 의 길이는 몇 cm 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: AB 를 미지수로 놓고 AD 를 그 미지수로 나타낸다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph6" data-ans="21" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>좌표평면 위의 세 점 A(0, 1), B(6, 2), C(3, 9) 와 한 점 D 를 네 꼭짓점으로 하는 평행사변형을 만들려고 한다. 가능한 점 D 는 세 개이다. 세 점 D 의 x좌표와 y좌표를 모두 더한 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: A, B, C 중 어느 두 점이 D 와 이웃하느냐에 따라 D 가 세 가지로 정해진다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph7" data-ans="13" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>아래 그림과 같이 평행사변형 ABCD 에서 ∠A = 115°, ∠ADB = 26° 이다. 대각선 BD 를 접는 선으로 하여 접었을 때 점 C 가 옮겨진 점을 C′ 이라 하고, BC′ 과 AD 의 교점을 F 라 하자. ∠ABF 의 크기를 구하시오.</div>
+<!-- ============ 대각선 BD 를 접는 선으로 접은 그림 ============ -->
+<div class="u3-wrap">
+<div class="u3-t">대각선 BD 를 접는 선으로 접은 그림</div>
+<div class="diagram-wrap" style="max-width:535px;margin:10px auto"><svg class="dia" viewBox="15 4 535 360" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif"><line x1="40.0" y1="334.1" x2="413.3" y2="334.1" stroke="var(--muted)" stroke-width="1.4" stroke-dasharray="5,4" stroke-linecap="round"/><line x1="413.3" y1="334.1" x2="523.1" y2="98.5" stroke="var(--muted)" stroke-width="1.4" stroke-dasharray="5,4" stroke-linecap="round"/><line x1="149.9" y1="98.5" x2="40.0" y2="334.1" stroke="var(--text)" stroke-width="2.0" stroke-linecap="round"/><line x1="149.9" y1="98.5" x2="523.1" y2="98.5" stroke="var(--text)" stroke-width="2.0" stroke-linecap="round"/><line x1="40.0" y1="334.1" x2="523.1" y2="98.5" stroke="var(--text)" stroke-width="1.6" stroke-linecap="round"/><line x1="40.0" y1="334.1" x2="269.8" y2="40.0" stroke="var(--purple)" stroke-width="2.0" stroke-linecap="round"/><line x1="269.8" y1="40.0" x2="523.1" y2="98.5" stroke="var(--purple)" stroke-width="2.0" stroke-linecap="round"/><polyline points="144.0,111.2 145.4,111.8 146.9,112.2 148.5,112.4 150.0,112.5 151.6,112.4 153.1,112.1 154.6,111.7 156.0,111.1 157.4,110.3 158.7,109.4 159.8,108.3 160.9,107.2 161.8,105.9 162.5,104.5 163.1,103.1 163.5,101.6 163.8,100.0 163.9,98.5" fill="none" stroke="var(--text)" stroke-width="1.6"/><text x="167.9" y="131.4" font-size="13" fill="var(--text)" text-anchor="middle" font-weight="700">115°</text><polyline points="501.1,98.5 501.1,99.0 501.2,99.6 501.2,100.1 501.2,100.7 501.3,101.3 501.4,101.8 501.5,102.3 501.6,102.9 501.7,103.4 501.8,104.0 502.0,104.5 502.1,105.0 502.3,105.6 502.5,106.1 502.7,106.6 502.9,107.1 503.1,107.6 503.4,108.1" fill="none" stroke="var(--text)" stroke-width="1.6"/><text x="449.6" y="120.2" font-size="13" fill="var(--text)" text-anchor="middle" font-weight="700">26°</text><text x="135.2" y="95.4" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">A</text><text x="28.0" y="351.5" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">B</text><text x="428.0" y="348.0" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C</text><text x="536.1" y="103.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">D</text><text x="279.3" y="28.9" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">C′</text><text x="216.6" y="83.2" font-size="15" fill="var(--text)" text-anchor="middle" font-weight="700">F</text></svg></div>
+<div class="u3-cap">점선은 접기 전의 BC, CD 이고, 보라색이 접은 뒤의 BC′, C′D 이다.</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 접은 각은 크기가 같다. ∠ABD 와 ∠DBC 를 각각 구한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph8" data-ans="14" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>둘레의 길이가 46 cm 인 평행사변형 ABCD 의 두 대각선의 교점을 O 라 하자. △OAB 의 둘레의 길이가 △OBC 의 둘레의 길이보다 5 cm 길 때, AB 의 길이는 몇 cm 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: △OAB 와 △OBC 가 함께 가진 변과 길이가 같은 변을 찾으면 둘레의 차가 어느 두 변의 차인지 보인다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph9" data-ans="19" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>넓이가 60 cm² 인 평행사변형 ABCD 의 내부의 한 점 P 에 대하여 △PAB : △PCD = 2 : 3 이고, △PBC 의 넓이가 △PDA 의 넓이보다 8 cm² 클 때, △PBC 의 넓이는 몇 cm² 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 마주 보는 두 쌍 각각의 합이 평행사변형 넓이의 절반이다. 두 식을 따로 세운다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph10" data-ans="36" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>넓이가 60 cm² 인 평행사변형 ABCD 에서 대각선 BD 의 길이가 10 cm 이다. 대각선 BD 위에 BE = DF = 2 cm 가 되도록 두 점 E, F 를 잡을 때, □AECF 의 넓이는 몇 cm² 인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 높이가 같은 삼각형의 넓이는 밑변의 길이에 비례한다. △ABD 를 먼저 생각한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <section class="wrongnote" id="pwrong">
+      <h2>📒 연습 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(연습문제에서 틀린 문제)</span></h2>
+      <div id="pwrongList"><p class="empty">아직 틀린 문제가 없어요.</p></div>
+    </section>
+  </div>
+</div>
+
+<nav class="unit-nav" aria-label="단원 이동">
+    <a class="pv" href="note_2-2_2_%EC%82%BC%EA%B0%81%ED%98%95%EC%9D%98%EC%84%B1%EC%A7%882_PRO.html">
+      <span class="un-lbl">← 이전 단원</span>
+      <span class="un-t">2단원 · 삼각형의 성질(2)</span>
+    </a>
+</nav>
+
+<footer class="site-foot">
+  <p><a href="index.html">← 중2 2학기 목차</a><span class="sep">·</span><a href="/">Isaac Math 홈</a><span class="sep">·</span><a href="/about.html">사이트 소개</a><span class="sep">·</span><a href="/privacy.html">개인정보처리방침</a></p>
+  <p>© Isaac Math · 개인 학습용으로 자유롭게 이용하세요. 무단 복제·재배포는 금합니다.</p>
+</footer>
+
+<script>
+const LS='isaacmath_note_2-2-3_v1';
+let state={done:[],results:{},reviewed:false};
+function load(){try{const s=JSON.parse(localStorage.getItem(LS));if(s&&typeof s==='object'){state.done=s.done||[];state.results=s.results||{};state.reviewed=!!s.reviewed;}}catch(e){}}
+function save(){try{localStorage.setItem(LS,JSON.stringify(state));}catch(e){}}
+
+let cel={init:false,practice:false,applied:false,hard:false};
+const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function toast(msg,type){const t=document.createElement('div');t.className='toast '+(type==='ng'?'ng':'ok');t.textContent=msg;document.body.appendChild(t);requestAnimationFrame(()=>t.classList.add('show'));setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),300);},2200);}
+function flashWrong(id){const el=document.getElementById(id);if(!el)return;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');}
+function confetti(){if(reduceMotion)return;const c=document.createElement('canvas');c.className='confetti-canvas';c.width=innerWidth;c.height=innerHeight;document.body.appendChild(c);const ctx=c.getContext('2d');const cols=['#34d399','#60a5fa','#fbbf24','#c4b5fd','#f87171'];const ps=[];for(let i=0;i<90;i++)ps.push({x:Math.random()*c.width,y:-20-Math.random()*c.height*0.3,r:4+Math.random()*5,vx:-2+Math.random()*4,vy:2+Math.random()*4,col:cols[i%cols.length],rot:Math.random()*6.28,vr:-0.2+Math.random()*0.4});let t0=null;function frame(ts){if(!t0)t0=ts;const el=ts-t0;ctx.clearRect(0,0,c.width,c.height);ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=0.05;p.rot+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.fillStyle=p.col;ctx.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.7);ctx.restore();});if(el<1600)requestAnimationFrame(frame);else c.remove();}requestAnimationFrame(frame);}
+function celebrate(msg){toast(msg,'ok');confetti();}
+
+function toggleTheme(){document.documentElement.classList.toggle('light');const light=document.documentElement.classList.contains('light');document.getElementById('themeBtn').textContent=light?'🌙 다크 모드':'☀️ 라이트 모드';}
+function resetAll(){if(confirm('이 단원의 모든 진행 상황(완료·채점·오답·잠금)을 초기화할까요?')){state={done:[],results:{},reviewed:false};save();location.reload();}}
+
+function onScroll(){const h=document.documentElement;const sc=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('pbar').style.width=Math.min(100,sc)+'%';}
+window.addEventListener('scroll',onScroll);
+
+document.addEventListener('keydown',function(e){
+  if(e.key!=='Enter')return;
+  const inp=e.target;
+  if(inp.classList&&inp.classList.contains('quiz-input')){
+    e.preventDefault();
+    const row=inp.closest('.quiz-row');const btn=row&&row.querySelector('.quiz-submit');
+    if(btn)grade(btn);
+  }
+});
+
+const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;document.querySelectorAll('.tlink').forEach(a=>a.classList.remove('active'));const l=document.querySelector('.tlink[href="#'+id+'"]');if(l)l.classList.add('active');}});},{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('.section,#wrong,#gate').forEach(s=>spy.observe(s));
+
+function qtext(el){const q=el.querySelector('.quiz-q, .pq');return q?q.textContent.trim():'';}
+function ids(t){return [...document.querySelectorAll('[data-qid]')].filter(t);}
+const bodyEls=()=>ids(q=>q.dataset.qid[0]==='b');
+const setEls=(p)=>ids(q=>q.dataset.qid.startsWith(p));
+const gradedIn=(list)=>list.filter(q=>state.results[q.dataset.qid]).length;
+
+function grade(btn){
+  const el=btn.closest('[data-qid]');const qid=el.dataset.qid;
+  const inp=el.querySelector('.quiz-input');const type=el.dataset.type;
+  const cands=el.dataset.ans.split('|');   // 복수 정답 지원
+  let val=inp.value.trim();
+  let ok=type==='num'?(val!==''&&cands.some(a=>Number(val)===Number(a))):cands.some(a=>val.replace(/\s/g,'')===a.replace(/\s/g,''));
+  state.results[qid]={correct:ok,given:val||'(미입력)',question:qtext(el),ans:cands[0]};
+  if(!ok){flashWrong(qid[0]==='p'?'pwrong':'wrong');toast('❌ 틀린 문제가 오답노트에 기록됐어요','ng');}
+  save();refresh();
+}
+function paint(el){
+  const qid=el.dataset.qid;const r=state.results[qid];const fb=el.querySelector('.quiz-fb');const inp=el.querySelector('.quiz-input');
+  if(!fb)return;
+  if(r){if(inp&&inp.value===''&&r.given!=='(미입력)')inp.value=r.given;
+    fb.classList.add('show');
+    if(r.correct){fb.className='quiz-fb show ok';fb.textContent='✅ 정답이에요!';}
+    else{fb.className='quiz-fb show ng';fb.textContent='❌ 다시 생각해봐요. (오답노트에 기록됐어요)';}
+  } else {fb.className='quiz-fb';fb.textContent='';}
+}
+
+function toggleDone(id){const i=state.done.indexOf(id);if(i>=0)state.done.splice(i,1);else state.done.push(id);save();refresh();}
+function reveal(btn){const box=btn.closest('.solution');const steps=box.querySelectorAll('.step');for(const s of steps){if(!s.classList.contains('show')){s.classList.add('show');break;}}if([...steps].every(s=>s.classList.contains('show'))){btn.disabled=true;btn.textContent='모든 단계 공개됨';}}
+function reviewWrong(){state.reviewed=true;save();refresh();}
+function clearWrong(){for(const k of Object.keys(state.results)){if(state.results[k].correct===false)delete state.results[k];}save();refresh();}
+function startPractice(){const wrap=document.getElementById('practiceWrap');if(wrap.style.display==='block'){document.getElementById('pset_basic').scrollIntoView({behavior:'smooth'});}}
+
+function renderWrongList(boxId,list){
+  const box=document.getElementById(boxId);
+  const items=list.filter(q=>{const r=state.results[q.dataset.qid];return r&&r.correct===false;}).map(q=>state.results[q.dataset.qid]);
+  if(!items.length){box.innerHTML='<p class="empty">아직 틀린 문제가 없어요.</p>';return;}
+  box.innerHTML=items.map(w=>'<div class="wrong-item"><div class="wq">'+w.question+'</div><div class="wa">내 답: '+w.given+' · 정답: '+w.ans+'</div></div>').join('');
+}
+
+function refresh(){
+  state.done=state.done.filter(id=>document.getElementById(id));
+  const secs=document.querySelectorAll('.section');
+  secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
+  const total=secs.length;const p=Math.round(state.done.length/total*100);
+  document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
+  document.getElementById('b_first').classList.toggle('on',state.done.length>=1);
+  document.getElementById('b_half').classList.toggle('on',p>=50);
+  document.getElementById('b_master').classList.toggle('on',p>=100);
+  const d=document.getElementById('achDesc');
+  d.textContent=p>=100?'🏆 단원 마스터! 모든 섹션을 끝냈어요.':(p>=50?'🔥 절반 돌파! 끝까지 가볼까요?':'각 섹션을 끝내면 완료 버튼을 눌러 진행률을 채워보세요.');
+
+  document.querySelectorAll('[data-qid]').forEach(paint);
+
+  renderWrongList('wrongList',bodyEls());
+  renderWrongList('pwrongList',[...setEls('pb'),...setEls('pa'),...setEls('ph')]);
+  const rb=document.getElementById('reviewBtn');if(state.reviewed){rb.classList.add('done');rb.textContent='✓ 오답 정리 완료';}else{rb.classList.remove('done');rb.textContent='오답 정리 완료';}
+
+  const body=bodyEls();const bg=gradedIn(body);
+  document.getElementById('gradedCount').textContent=bg;
+  document.getElementById('quizTotal').textContent=body.length;
+  const quizDone=bg===body.length&&body.length>0;
+  document.getElementById('ck_quiz').classList.toggle('ok',quizDone);
+  document.getElementById('ck_review').classList.toggle('ok',state.reviewed);
+  const unlocked=quizDone&&state.reviewed;
+  const sb=document.getElementById('startBtn');
+  if(unlocked){sb.className='start-btn open';sb.textContent='✏️ 연습문제 풀기 →';}
+  else{sb.className='start-btn locked';sb.textContent='🔒 연습문제 풀기 (잠김)';}
+  document.getElementById('practiceWrap').style.display=unlocked?'block':'none';
+
+  const nb=setEls('pb').length, na=setEls('pa').length;
+  const gb=gradedIn(setEls('pb')),ga=gradedIn(setEls('pa')),gh=gradedIn(setEls('ph'));
+  setCount('cnt_basic',gb,nb);setCount('cnt_applied',ga,na);setCount('cnt_hard',gh,setEls('ph').length);
+  document.getElementById('pset_basic').classList.remove('locked');
+  document.getElementById('pset_applied').classList.toggle('locked',gb<nb);
+  document.getElementById('pset_hard').classList.toggle('locked',ga<na);
+
+  const cur={practice:unlocked,applied:gb>=nb,hard:ga>=na};
+  if(cel.init){
+    if(cur.practice&&!cel.practice)celebrate('🎉 축하합니다! 연습문제가 열렸어요!');
+    else if(cur.hard&&!cel.hard)celebrate('🏆 심화 레벨이 열렸어요!');
+    else if(cur.applied&&!cel.applied)celebrate('🔥 응용 레벨이 열렸어요!');
+  }
+  cel={init:true,practice:cur.practice,applied:cur.applied,hard:cur.hard};
+}
+function setCount(id,n,tot){const el=document.getElementById(id);el.textContent=n+' / '+tot;el.classList.toggle('clear',n>=tot);}
+
+load();
+if(document.documentElement.classList.contains('light'))document.getElementById('themeBtn').textContent='🌙 다크 모드';
+refresh();
+</script>
+</body>
+</html>
